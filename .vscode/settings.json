@@ -1,0 +1,50 @@
+{
+   "paste-replaced.replacers": [
+      {
+         "name": "Format Figma Output CSS",
+         "replacements": [
+            [
+               "var\\(--([^,]*), [^\\)]*\\)",
+               "$$$1",
+               "g"
+            ],
+            [
+               "(\n|^)font-family: Montserrat;[^\n]*",
+               "",
+               "g"
+            ],
+            [
+               "(\n|^)color: \\$color;[^\n]*",
+               "",
+               "g"
+            ],
+            [
+               "(\n|^)[^:]*: normal;[^\n]*",
+               "",
+               "g"
+            ],
+            [
+               "(\n|^)[^:]*: 400;[^\n]*",
+               "",
+               "g"
+            ],
+            [
+               "font-size: ([^p]*)px;",
+               "font-size: em($1);\n@function em($one, $two: $1) {\n\t@return prc($one, $two, 1) + 0em;\n}",
+               "g"
+            ],
+            [
+               "(\\d+(\\.\\d+)?)px",
+               "em($1)",
+               "g"
+            ]
+         ],
+      }
+   ],
+   "files.associations": {
+      "*.html": "html",
+   },
+   "path-autocomplete.pathMappings": {
+      "img": "${folder}/src/img"
+   },
+}

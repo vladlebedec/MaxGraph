@@ -1,0 +1,31 @@
+@use "sass:color";
+@use "sass:math";
+// базовые подключения
+@import "mixins";
+@import "vars";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+
+body {
+  margin: 0;
+  font-family: Google Sans;
+  font-weight: 400;
+  font-style: Regular;
+  background: grey;
+}
+
+.hero {
+  position: relative;
+  min-height: em(680);
+  &__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+}

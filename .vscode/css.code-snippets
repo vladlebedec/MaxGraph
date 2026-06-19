@@ -1,0 +1,1095 @@
+{
+   //=======================================================================================================================================================================================================================================================
+   "Padding 0": {
+      "scope": "scss,css",
+      "prefix": "p",
+      "body": [
+         "padding: $1;"
+      ]
+   },
+   "Padding с выделением каждого": {
+      "scope": "scss,css",
+      "prefix": "pp",
+      "body": [
+         "padding: $1 $2 $3 $4;"
+      ]
+   },
+   "Padding справа и слева": {
+      "scope": "scss,css",
+      "prefix": "prl",
+      "body": [
+         "padding: 0 $1;"
+      ]
+   },
+   "Padding сверху и снизу": {
+      "scope": "scss,css",
+      "prefix": "ptb",
+      "body": [
+         "padding: $1 0;"
+      ]
+   },
+   "Padding сверху": {
+      "scope": "scss,css",
+      "prefix": "pt",
+      "body": [
+         "padding-top: $1;"
+      ]
+   },
+   "Padding снизу": {
+      "scope": "scss,css",
+      "prefix": "pb",
+      "body": [
+         "padding-bottom: $1;"
+      ]
+   },
+   "Padding слева": {
+      "scope": "scss,css",
+      "prefix": "pl",
+      "body": [
+         "padding-left: $1;"
+      ]
+   },
+   "Padding справа": {
+      "scope": "scss,css",
+      "prefix": "pr",
+      "body": [
+         "padding-right: $1;"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Margin 0": {
+      "scope": "scss,css",
+      "prefix": "m",
+      "body": [
+         "margin: 0;"
+      ]
+   },
+   "Margin с выделением каждого": {
+      "scope": "scss,css",
+      "prefix": "mm",
+      "body": [
+         "margin: $1 $2 $3 $4;"
+      ]
+   },
+   "Margin справа и слева": {
+      "scope": "scss,css",
+      "prefix": "mrl",
+      "body": [
+         "margin: 0 $1;"
+      ]
+   },
+   "Margin сверху и снизу": {
+      "scope": "scss,css",
+      "prefix": "mtb",
+      "body": [
+         "margin: $1 0;"
+      ]
+   },
+   "Margin сверху": {
+      "scope": "scss,css",
+      "prefix": "mt",
+      "body": [
+         "margin-top: $1;"
+      ]
+   },
+   "Margin снизу": {
+      "scope": "scss,css",
+      "prefix": "mb",
+      "body": [
+         "margin-bottom: $1;"
+      ]
+   },
+   "Margin слева": {
+      "scope": "scss,css",
+      "prefix": "ml",
+      "body": [
+         "margin-left: $1;"
+      ]
+   },
+   "Margin справа": {
+      "scope": "scss,css",
+      "prefix": "mr",
+      "body": [
+         "margin-right: $1;"
+      ]
+   },
+   "Margin 0 auto": {
+      "scope": "scss,css",
+      "prefix": "mrlc",
+      "body": [
+         "margin: 0 auto;"
+      ],
+   },
+   "Margin авто": {
+      "scope": "scss,css",
+      "prefix": "ma",
+      "body": [
+         "margin: auto;"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Шрифт Montserrat": {
+      "scope": "scss,css",
+      "prefix": "ffmontserrat",
+      "body": "font-family: \"Montserrat\", sans-serif;"
+   },
+   "Шрифт JanaThorkPro": {
+      "scope": "scss,css",
+      "prefix": "ffjtp",
+      "body": "font-family: \"JanaThorkPro\", sans-serif;"
+   },
+   "Шрифт Dela Gothic One": {
+      "scope": "scss,css",
+      "prefix": "ffdgo",
+      "body": "font-family: \"Dela Gothic One\", cursive;"
+   },
+   "Шрифт Roboto": {
+      "scope": "scss,css",
+      "prefix": "ffroboto",
+      "body": [
+         "font-family: \"Roboto\", sans-serif;"
+      ]
+   },
+   "Шрифт UniSansHeavyCaps": {
+      "scope": "scss,css",
+      "prefix": "ffunisansheavycaps",
+      "body": [
+         "font-family: \"UniSansHeavyCaps\", sans-serif;"
+      ]
+   },
+   "Шрифт Lato": {
+      "scope": "scss,css",
+      "prefix": "fflato",
+      "body": [
+         "font-family: \"Lato\", sans-serif;"
+      ]
+   },
+   "Шрифт Open Sans": {
+      "scope": "scss,css",
+      "prefix": "ffopen sans",
+      "body": [
+         "font-family: \"Open Sans\", sans-serif;"
+      ]
+   },
+   "Шрифт Noto Sans": {
+      "scope": "scss,css",
+      "prefix": "ffnoto sans",
+      "body": [
+         "font-family: \"Noto Sans\", sans-serif;"
+      ]
+   },
+   "Шрифт MyriadPro": {
+      "scope": "scss,css",
+      "prefix": "ffmyriadpro",
+      "body": [
+         "font-family:\"MyriadPro\", sans-serif;"
+      ]
+   },
+   "Шрифт HelveticaNeue": {
+      "scope": "scss,css",
+      "prefix": "ffhelveticaneue",
+      "body": [
+         "font-family:\"HelveticaNeue\", sans-serif;"
+      ]
+   },
+   "Шрифт Muller": {
+      "scope": "scss,css",
+      "prefix": "ffmuller",
+      "body": [
+         "font-family:\"Muller\", sans-serif;"
+      ]
+   },
+   "Шрифт Gotham": {
+      "scope": "scss,css",
+      "prefix": "ffgothampro",
+      "body": [
+         "font-family: \"GothamPro\", sans-serif;"
+      ]
+   },
+   "Шрифт ProximaNova": {
+      "scope": "scss,css",
+      "prefix": "ffproximanova",
+      "body": [
+         "font-family: \"ProximaNova\", sans-serif;"
+      ]
+   },
+   "Шрифт Ubuntu": {
+      "scope": "scss,css",
+      "prefix": "ffubuntu",
+      "body": [
+         "font-family: \"Ubuntu\", sans-serif;"
+      ]
+   },
+   "Шрифт Neucha": {
+      "scope": "scss,css",
+      "prefix": "ffneucha",
+      "body": [
+         "font-family: \"Neucha\", sans-serif;"
+      ]
+   },
+   "Шрифт Space Mono": {
+      "scope": "scss,css",
+      "prefix": "ffspace mono",
+      "body": "font-family: \"Space Mono\", monospace;"
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Figure Квадрат": {
+      "scope": "scss,css",
+      "prefix": "figk",
+      "body": [
+         "width: $1;",
+         "height: $2;",
+         "background-color: $3;"
+      ]
+   },
+   "Figure Круг": {
+      "scope": "scss,css",
+      "prefix": "figc",
+      "body": [
+         "width: $1;",
+         "height: $2;",
+         "border-radius: 50%;",
+         "background-color: $3;"
+      ]
+   },
+   "Figure Треугольник вверх": {
+      "scope": "scss,css",
+      "prefix": "figtt",
+      "body": [
+         "width: 0;",
+         "height: 0;",
+         "border-left: $1 solid transparent;",
+         "border-right: $1 solid transparent;",
+         "border-bottom: $2 solid;"
+      ]
+   },
+   "Figure Треугольник влево": {
+      "scope": "scss,css",
+      "prefix": "figtl",
+      "body": [
+         "width: 0;",
+         "height: 0;",
+         "border-bottom: $1 solid transparent;",
+         "border-top: $1 solid transparent;",
+         "border-right: $2 solid;"
+      ]
+   },
+   "Figure Треугольник вправо": {
+      "scope": "scss,css",
+      "prefix": "figtr",
+      "body": [
+         "width: 0;",
+         "height: 0;",
+         "border-bottom: $1 solid transparent;",
+         "border-top: $1 solid transparent;",
+         "border-left: $2 solid;"
+      ]
+   },
+   "Figure Треугольник вниз": {
+      "scope": "scss,css",
+      "prefix": "figtb",
+      "body": [
+         "width: 0;",
+         "height: 0;",
+         "border-left: $1 solid transparent;",
+         "border-right: $1 solid transparent;",
+         "border-top: $2 solid;"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Цвет": {
+      "scope": "scss,css",
+      "prefix": "col",
+      "body": [
+         "color: $1;"
+      ]
+   },
+   "Черный цвет шрифта": {
+      "scope": "scss,css",
+      "prefix": "c0",
+      "body": [
+         "color: #000;"
+      ]
+   },
+   "Белый цвет шрифта": {
+      "scope": "scss,css",
+      "prefix": "cf",
+      "body": [
+         "color: #fff;"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Media Запрос for-desktop": {
+      "scope": "scss,css",
+      "prefix": "md0",
+      "body": [
+         "@include for-desktop {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Media Запрос big-desktop": {
+      "scope": "scss,css",
+      "prefix": "md1",
+      "body": [
+         "@include big-desktop {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Media Запрос desktop": {
+      "scope": "scss,css",
+      "prefix": "md11",
+      "body": [
+         "@include desktop {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Media Запрос tablet": {
+      "scope": "scss,css",
+      "prefix": "md2",
+      "body": [
+         "@include tablet {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Media Запрос small-tablet": {
+      "scope": "scss,css",
+      "prefix": "md3",
+      "body": [
+         "@include small-tablet {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Media Запрос small-tablet-min": {
+      "scope": "scss,css",
+      "prefix": "md3m",
+      "body": [
+         "@include small-tablet-min {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Media Запрос mobile": {
+      "scope": "scss,css",
+      "prefix": "md4",
+      "body": [
+         "@include mobile {",
+         "\t$0",
+         "}"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Тень при наведении": {
+      "scope": "scss,css",
+      "prefix": "hbtn",
+      "body": [
+         "//Тень при наведении",
+         "position: relative;",
+         "cursor: pointer;",
+         "@include transition();",
+         "box-shadow: 0 0 0 $1;",
+         "top: 0;",
+         "body.js_s-mouse &:hover {",
+         "\tbox-shadow: 0 to-rem(10) 0 $2;",
+         "\ttop: to-rem(-10);",
+         "}"
+      ]
+   },
+   "Стрелка при наведении": {
+      "scope": "scss,css",
+      "prefix": "ht",
+      "body": [
+         "//Стрелка при наведении",
+         "position: relative;",
+         "cursor: pointer;",
+         "@include transition();",
+         "&:before {",
+         "\tcontent: \"\";",
+         "\t@include transition();",
+         "\tposition: absolute;",
+         "\tleft: 0;",
+         "\ttop: 50%;",
+         "\ttransform: (translate(0, -50%));",
+         "\topacity: 0;",
+         "\twidth: 0;",
+         "\theight: 0;",
+         "\tborder-top: to-rem(5) solid transparent;",
+         "\tborder-left: to-rem(10) solid $1;",
+         "\tborder-bottom: to-rem(5) solid transparent;",
+         "}",
+         "body.js_s-mouse &:hover {",
+         "\tpadding-left: to-rem(20);",
+         "\t&:before {",
+         "\t\topacity: 1;",
+         "\t}",
+         "}"
+      ]
+   },
+   "Зачеркивание с маской": {
+      "scope": "scss,css",
+      "prefix": "hzm",
+      "body": [
+         "//Зачеркивание с маской",
+         "position: relative;",
+         "overflow: hidden;",
+         "&:before {",
+         "\tcontent: \"\";",
+         "\tposition: absolute;",
+         "\ttop: 50%;",
+         "\tbackground: $1;",
+         "\theight: to-rem(2);",
+         "\tleft: 0;",
+         "\twidth: 100%;",
+         "\ttransform: translate(-101%, -50%);",
+         "\t@include transition(0.7, 0, ease-in-out);",
+         "}",
+         "&:after {",
+         "\tcontent: \"\";",
+         "\tposition: absolute;",
+         "\ttop: 0;",
+         "\tleft: 0;",
+         "\twidth: 100%;",
+         "\theight: 100%;",
+         "\tbackground: $2;",
+         "\ttransform: translate3d(-100%, 0, 0);",
+         "\t@include transition(0.7, 0, ease-in-out);",
+         "}",
+         "body.js_s-mouse &:hover:after {",
+         "\ttransform: translate3d(100%, 0, 0);",
+         "}",
+         "body.js_s-mouse &:hover:before {",
+         "\ttransform: translate(0, 0);",
+         "}"
+      ]
+   },
+   "Тряска": {
+      "scope": "scss,css",
+      "prefix": "hshack",
+      "body": [
+         "//Тряска",
+         "body.js_s-mouse &:hover {",
+         "\tanimation: shaking 1s ease 1;",
+         "}",
+         "@keyframes shaking {",
+         "\t15% {",
+         "\t\ttransform: (translateX(to-rem(5)));",
+         "\t}",
+         "\t30% {",
+         "\t\ttransform: (translateX(to-rem(-5)));",
+         "\t}",
+         "\t50% {",
+         "\t\ttransform: (translateX(to-rem(3)));",
+         "\t}",
+         "\t65% {",
+         "\t\ttransform: (translateX(to-rem(-3)));",
+         "\t}",
+         "\t80% {",
+         "\t\ttransform: (translateX(to-rem(2)));",
+         "\t}",
+         "\t100% {",
+         "\t\ttransform: (translateX(0));",
+         "\t}",
+         "}"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Подчеркивание с центра(Ставить ссылке)": {
+      "scope": "scss,css",
+      "prefix": "hpc",
+      "body": [
+         "//Подчеркивание с центра(Ставить ссылке)",
+         "position: relative;",
+         "@include transition();",
+         "body.js_s-mouse &:hover {",
+         "\t&:before {",
+         "\t\twidth: 100%;",
+         "\t}",
+         "}",
+         "&:before {",
+         "\tcontent: \"\";",
+         "\tposition: absolute;",
+         "\tbackground-color: $1;",
+         "\t@include transition();",
+         "\theight: to-rem(1);",
+         "\tbottom: 0%;",
+         "\tleft: 50%;",
+         "\twidth: 0%;",
+         "\ttransform: (translate(-50%, 0));",
+         "}"
+      ]
+   },
+   "Подчеркивание слево при наведении": {
+      "scope": "scss,css",
+      "prefix": "hpl",
+      "body": [
+         "//Подчеркивание слева(Ставить ссылке)\nposition: relative;\n@include transition();\nbody.js_s-mouse &:hover {\n\t&:before{\n\t\twidth: 100%;\n\t}\n}\nbody.js_s-mouse &:active{\n\t&:before{\n\t\tleft: 100%;\n\t\twidth: 0;\n\t}\n}\n&:before {\n\tcontent: \"\";\n\tposition: absolute;\n\tbottom: 0;\n\tleft: 0%;\n\twidth: 0%;\n\tbackground-color: ${1:#000};\n\theight: to-rem(1);\n\t@include transition();\n}"
+      ]
+   },
+   "Подчеркивание справа при наведении": {
+      "scope": "scss,css",
+      "prefix": "hpr",
+      "body": [
+         "//Подчеркивание слева(Ставить ссылке)\nposition: relative;\n@include transition();\nbody.js_s-mouse &:hover {\n\t&:before{\n\t\twidth: 100%;\n\t}\n}\nbody.js_s-mouse &:active{\n\t&:before{\n\t\tright: 100%;\n\t\twidth: 0;\n\t}\n}\n&:before {\n\tcontent: \"\";\n\tposition: absolute;\n\tbottom: 0;\n\tright: 0%;\n\twidth: 0%;\n\tbackground-color: $1;\n\theight: to-rem(1);\n\t@include transition();\n}"
+      ]
+   },
+   "Подчеркивание слево на право": {
+      "scope": "scss,css",
+      "prefix": "hplr",
+      "body": [
+         "//Подчеркивание слево на право(Ставить ссылке)\nposition: relative;\n@include transition();\n&:after {\n\tcontent: \"\";\n\tposition: absolute;\n\twidth: 100%;\n\ttransform: scaleX(0);\n\theight: to-rem(2);\n\tbottom: 0;\n\tleft: 0;\n\tbackground-color: ${1:#333};\n\ttransform-origin: bottom right;\n\ttransition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1) 0s;\n}\nbody.js_s-mouse &:hover:after {\n\ttransform: (scaleX(1));\n\ttransform-origin: bottom left;\n}"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Выезжающие границы при наведении": {
+      "scope": "scss,css",
+      "prefix": "hbc",
+      "body": [
+         "//Выезжающие границы по середине со всех сторон(Ставить ссылке)",
+         "position: relative;",
+         "span {",
+         "\tposition: relative;",
+         "\tz-index: 2;",
+         "}",
+         "&:before,",
+         "&:after {",
+         "\tcontent: \"\";",
+         "\tposition: absolute;",
+         "\tleft: 0%;",
+         "\ttop: 0%;",
+         "\twidth: 100%;",
+         "\theight: 100%;",
+         "\tborder-style: solid;",
+         "\tborder-color: #000;",
+         "\tborder-radius: to-rem(15);",
+         "\t@include transition();",
+         "}",
+         "&:before {",
+         "\tborder-width: to-rem(2) 0 to-rem(2) 0;",
+         "\ttransform:  (scaleX(0));",
+         "}",
+         "&:after {",
+         "\tborder-width: 0 to-rem(2) 0 to-rem(2);",
+         "\ttransform:  (scaleY(0));",
+         "}",
+         "body.js_s-mouse &:hover:before,",
+         "body.js_s-mouse &:hover:after {",
+         "\ttransform:  (scale(1));",
+         "}"
+      ]
+   },
+   "Сверху и снизу выйзжают границы при наведении": {
+      "scope": "scss,css",
+      "prefix": "hbtb",
+      "body": [
+         "//Сверху и снизу выезжают границы(Ставить ссылке)",
+         "position: relative;",
+         "&:before,",
+         "&:after {",
+         "\tcontent: \"\";",
+         "\tposition: absolute;",
+         "\t@include transition();",
+         "\twidth: 0%;",
+         "\theight: to-rem(2);",
+         "\tbackground: $1;",
+         "}",
+         "&:before {",
+         "\tbottom: 0;",
+         "\tleft: 0;",
+         "}",
+         "&:after {",
+         "\ttop: 0;",
+         "\tright: 0;\t",
+         "}",
+         "body.js_s-mouse &:hover:before,",
+         "body.js_s-mouse &:hover:after {",
+         "\twidth: 100%;",
+         "}"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Заполнение фона вверх": {
+      "scope": "scss,css",
+      "prefix": "hzt",
+      "body": [
+         "//Заполнение фона вверх(Ставить ссылке)\nposition: relative;\nspan {\n\tposition: relative;\n\tz-index: 2;\n}\nbody.js_s-mouse &:hover {\n\t&:after{\n\t\ttop: 0;\n\t\theight: 100%;\n\t}\n}\nbody.js_s-mouse &:active{\n\t&:after{\n\t\tleft: 50%;\n\t\ttransform: translate(-50%, 0);\n\t\twidth: 0%;\n\t}\n}\n&:after {\n\tcontent: \"\";\n\tposition: absolute;\n\ttop: 100%;\n\tleft: 0%;\n\twidth: 100%;\n\theight: 0%;\n\tbackground-color: ${1:#999};\n\t@include transition();\n\tz-index: 1;\n}"
+      ]
+   },
+   "Заполнение фона вниз": {
+      "scope": "scss,css",
+      "prefix": "hzb",
+      "body": [
+         "//Заполнение фона вниз(Ставить ссылке)\nposition: relative;\nspan {\n\tposition: relative;\n\tz-index: 2;\n}\nbody.js_s-mouse &:hover {\n\t&:after{\n\t\tbottom: 0;\n\t\theight: 100%;\n\t}\n}\nbody.js_s-mouse &:active{\n\t&:after{\n\t\tleft: 50%;\n\t\ttransform: translate(-50%, 0);\n\t\twidth: 0%;\n\t}\n}\n&:after {\n\tcontent: \"\";\n\tposition: absolute;\n\tbottom: 100%;\n\tleft: 0%;\n\twidth: 100%;\n\theight: 0%;\n\tbackground-color: ${1:#999};\n\t@include transition();\n\tz-index: 1;\n}"
+      ]
+   },
+   "Заполнение фона влево": {
+      "scope": "scss,css",
+      "prefix": "hzl",
+      "body": [
+         "//Заполнение фона влево(Ставить ссылке)\nposition: relative;\nspan {\n\tposition: relative;\n\tz-index: 2;\n}\nbody.js_s-mouse &:hover {\n\t&:after{\n\t\tleft: 0;\n\t\twidth: 100%;\n\t}\n}\nbody.js_s-mouse &:active{\n\t&:after{\n\t\ttop: 50%;\n\t\ttransform: translate(0, -50%);\n\t\theight: 0%;\n\t}\n}\n&:after {\n\tcontent: \"\";\n\tposition: absolute;\n\tleft: 100%;\n\ttop: 0%;\n\twidth: 0%;\n\theight: 100%;\n\tbackground-color: ${1:#999};\n\t@include transition();\n\tz-index: 1;\n}"
+      ]
+   },
+   "Заполнение фона вправо": {
+      "scope": "scss,css",
+      "prefix": "hzr",
+      "body": [
+         "//Заполнение фона вправо(Ставить ссылке)\nposition: relative;\nspan {\n\tposition: relative;\n\tz-index: 2;\n}\nbody.js_s-mouse &:hover {\n\t&:after{\n\t\tright: 0;\n\t\twidth: 100%;\n\t}\n}\nbody.js_s-mouse &:active{\n\t&:after{\n\t\ttop: 50%;\n\t\ttransform: translate(0, -50%);\n\t\theight: 0%;\n\t}\n}\n&:after {\n\tcontent: \"\";\n\tposition: absolute;\n\tright: 100%;\n\ttop: 0%;\n\twidth: 0%;\n\theight: 100%;\n\tbackground-color: ${1:#999};\n\t@include transition();\n\tz-index: 1;\n}"
+      ]
+   },
+   "Пульсация": {
+      "scope": "scss,css",
+      "prefix": "hpp",
+      "body": [
+         "//Пульсация(Ставить ссылке)\n@include transition();\nbackground-color: ${1:#fff};\nbox-shadow: 0 0 0 0 rgba(#fff, 0.7);\nanimation: pulse 1.75s infinite cubic-bezier(0.66, 0, 0, 1);\n@keyframes pulse {\n\tto {\n\t\tbox-shadow: 0 0 0 to-rem(30) rgba(#e6edff, 0);\n\t}\n}\nbody.js_s-mouse &:hover{\n\tanimation-duration: 2s;\n}\nbody.js_s-mouse &:active{\n\tanimation-duration: 0.5s;\n}"
+      ]
+   },
+   "Загрузка": {
+      "scope": "scss,css",
+      "prefix": "load",
+      "body": [
+         "//Загрузка\nborder: to-rem(4) solid ${1:#999};\nborder-left-color: ${2:#ff000f};\nborder-radius: 50%;\nwidth: to-rem(30);\nheight: to-rem(30);\nanimation: ${3:loading} 1.2s linear infinite;\n@keyframes ${3:loading} {\n\t0% {\n\t\ttransform: rotate(0deg);\n\t}\n\t100% {\n\t\ttransform: rotate(360deg);\n\t}\n}"
+      ]
+   },
+   "Пульсирующий круг": {
+      "scope": "scss,css",
+      "prefix": "pulsc",
+      "body": [
+         "//Пульсирующий\npadding: to-rem(15);\nposition: relative;\n&:before,\n&:after{\n\tcontent:\"\";\n\tposition: absolute;\n\ttop: to-rem(-1);\n\tbottom: to-rem(-1);\n\tborder-radius: 50%;\n}\n&:before{\n\tbackground-color: hsl(243, 80%, 62%);\n\ttransform: (scale(0));\n\ttransition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);\n}\n&:after{\n\tborder: to-rem(2) solid hsl(243, 80%, 62%);\n\ttransform: (scale(1));\n\topacity: 1;\n\ttransition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),\n\ttransform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);\n}\nbody.js_s-mouse &:hover{\n&:before{\n\ttransform: (scale(1));\n}\n&:after{\n\ttransform: (scale(1.2));\n\topacity: 0;\n}\n}\nbody.js_s-mouse &:active{\n\t&:before{\n\t\ttransform: (scale(0));\n\t}\n\t&:after{\n\t\ttransform: (scale(1));\n\t\topacity: 1;\n\t}\n}"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Функция em": {
+      "scope": "scss,css",
+      "prefix": "fem",
+      "body": "em($1)"
+   },
+   "New EM": {
+      "scope": "scss,css",
+      "prefix": "newem",
+      "body": [
+         "@function em(\\$one, \\$two: $1) {",
+         "\t@return prc(\\$one, \\$two, 1) + 0em;",
+         "}"
+      ]
+   },
+   "Variable EM": {
+      "scope": "scss,css",
+      "prefix": "varem",
+      "body": [
+         "\\$em: $1;"
+      ]
+   },
+   "Функция rem": {
+      "scope": "scss,css",
+      "prefix": "frem",
+      "body": "to-rem($1)"
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Миксин Адаптивный шрифт": {
+      "scope": "scss,css",
+      "prefix": "dyf",
+      "body": [
+         "@include dynamic-font(${1:pcSize}, ${2:mobSize});"
+      ]
+   },
+   "Миксин Адаптивный опция": {
+      "scope": "scss,css",
+      "prefix": "do",
+      "body": [
+         "@include dynamic-option(${1|margin,padding,border-radius|}, ${2:pc}, ${3:mob});"
+      ]
+   },
+   "color.scale": {
+      "scope": "scss,css",
+      "prefix": "cscale",
+      "body": [
+         "color.scale(\\$$1, \\$${2|lightness,green,blue,hue,saturation,red,whiteness,blackness,alpha|}: $3%)"
+      ]
+   },
+   "Миксин Адаптивный Граница": {
+      "scope": "scss,css",
+      "prefix": "d-b",
+      "body": [
+         "@include dynamic-option(border, 2, 1, 0, 0, 0, 0, solid ${1:#000});"
+      ]
+   },
+   "Миксин Анимация": {
+      "scope": "scss,css",
+      "prefix": "aa",
+      "body": [
+         "@include transition($1);"
+      ]
+   },
+   "Миксин transform": {
+      "scope": "scss,css",
+      "prefix": "tr",
+      "body": [
+         "transform: $1;"
+      ]
+   },
+   "Swiper Imports SCSS": {
+      "scope": "scss",
+      "prefix": "impswiper",
+      "body": [
+         "@import \"../../node_modules/swiper/swiper\";",
+         "@import \"../../node_modules/swiper/modules/a11y/a11y\";"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "focus": {
+      "scope": "scss,css",
+      "prefix": "foc",
+      "body": [
+         "&:focus{\n\t$0\n}"
+      ]
+   },
+   "last-child": {
+      "scope": "scss,css",
+      "prefix": "lc",
+      "body": [
+         "&:last-child{\n\t$0\n}"
+      ]
+   },
+   "first-child": {
+      "scope": "scss,css",
+      "prefix": "fc",
+      "body": [
+         "&:first-child{\n\t$0\n}"
+      ]
+   },
+   "after": {
+      "scope": "scss,css",
+      "prefix": "af",
+      "body": [
+         "&:after{\n\tcontent:\"\";\n\t$0\n}"
+      ]
+   },
+   "before": {
+      "scope": "scss,css",
+      "prefix": "bf",
+      "body": [
+         "&:before{\n\tcontent:\"\";\n\t$0\n}"
+      ]
+   },
+   "hover": {
+      "scope": "scss,css",
+      "prefix": "hv",
+      "body": [
+         "@media (any-hover: hover) {\n\t&:hover{\n\t\t$0\n\t}\n}"
+      ]
+   },
+   "active": {
+      "scope": "scss,css",
+      "prefix": "ac",
+      "body": [
+         "&:active{\n\t$0\n}"
+      ]
+   },
+   "nth child": {
+      "scope": "scss,css",
+      "prefix": "nc",
+      "body": [
+         "&:nth-child($1){$0}"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Флекс центрирование align-items": {
+      "scope": "scss,css",
+      "prefix": "fbai",
+      "body": [
+         "align-items: ${1:center};"
+      ]
+   },
+   "Флекс разрешить перенос": {
+      "scope": "scss,css",
+      "prefix": "fbw",
+      "body": [
+         "flex-wrap: wrap;"
+      ]
+   },
+   "Флекс развернуть контейнер": {
+      "scope": "scss,css",
+      "prefix": "fbd",
+      "body": [
+         "flex-direction: column;"
+      ]
+   },
+   "Флекс ширина 100% разрешить увелечение и уменьшение": {
+      "scope": "scss,css",
+      "prefix": "fbg",
+      "body": [
+         "flex: 1 1 100%;"
+      ]
+   },
+   "Флекс ширина custom": {
+      "scope": "scss,css",
+      "prefix": "flex",
+      "body": [
+         "flex: ${1:1} ${2:1} to-rem(${3:});"
+      ]
+   },
+   "Флекс ширина auto разрешить увелечение и уменьшение": {
+      "scope": "scss,css",
+      "prefix": "fbga",
+      "body": [
+         "flex: 1 1 auto;"
+      ]
+   },
+   "Флекс ширина 50% фикс": {
+      "scope": "scss,css",
+      "prefix": "fbgd",
+      "body": [
+         "flex: 1 1 50%;"
+      ],
+   },
+   "Флекс ширина 33.333% фикс": {
+      "scope": "scss,css",
+      "prefix": "fbgt",
+      "body": [
+         "flex: 1 1 33.333%;"
+      ],
+   },
+   "Флекс ширина 25% фикс": {
+      "scope": "scss,css",
+      "prefix": "fbgch",
+      "body": [
+         "flex: 1 1 25%;"
+      ],
+   },
+   "Флекс ширина 20% фикс": {
+      "scope": "scss,css",
+      "prefix": "fbgp",
+      "body": [
+         "flex: 1 1 20%;"
+      ],
+   },
+   "Флекс ширина 16.6666666667% фикс": {
+      "scope": "scss,css",
+      "prefix": "fbgsh",
+      "body": [
+         "flex: 1 1 16.6666666667%;"
+      ],
+   },
+   "Флекс центрирование по всем осям": {
+      "scope": "scss,css",
+      "prefix": "fbc",
+      "body": [
+         "justify-content: center;\nalign-items: center;"
+      ]
+   },
+   "Разброс флекс элементов": {
+      "scope": "scss,css",
+      "prefix": "fbs",
+      "body": [
+         "justify-content: ${1:space-between};"
+      ]
+   },
+   //=======================================================================================================================================================================================================================================================
+   "Transform Center": {
+      "prefix": "trc",
+      "body": [
+         "transform: translate(-50%, -50%);"
+      ]
+   },
+   "Transform Center X": {
+      "prefix": "trcx",
+      "body": [
+         "transform: translateX(-50%);"
+      ]
+   },
+   "Transform Center Y": {
+      "prefix": "trcy",
+      "body": [
+         "transform: translateY(-50%);"
+      ]
+   },
+   "Background Preudo": {
+      "scope": "scss,css",
+      "prefix": "bgps",
+      "body": [
+         "&:before {",
+         "\tcontent: \"\";",
+         "\tposition: absolute;",
+         "\twidth: 100%;",
+         "\theight: 100%;",
+         "\ttop: 0;",
+         "\tleft: 0;",
+         "\tbackground-color: ${1:rgba(#000, $2)};",
+         "}"
+      ]
+   },
+   "New Em Font Size": {
+      "scope": "scss",
+      "prefix": "fzem",
+      "body": [
+         "font-size: em($1);",
+         "@function em(\\$one, \\$two: $1) {",
+         "\t@return prc(\\$one, \\$two, 1) + 0em;",
+         "}"
+      ]
+   },
+   "SASS Error": {
+      "scope": "scss,css",
+      "prefix": "@er",
+      "body": [
+         "@error \"Error\";"
+      ]
+   },
+   "Анимация Множественная": {
+      "scope": "scss,css",
+      "prefix": "aam",
+      "body": [
+         "transition: ${1:${2:all} 0.3s ease 0s};"
+      ]
+   },
+   "Позиционирование абсолютно, растяжка по экрану": {
+      "scope": "scss,css",
+      "prefix": "psa",
+      "body": [
+         "position: absolute;\nwidth: 100%;\nheight: 100%;\ntop: 0;\nleft: 0;"
+      ]
+   },
+   "Позиционирование фиксирование, растяжка по экрану": {
+      "scope": "scss,css",
+      "prefix": "psf",
+      "body": [
+         "position: fixed;\nwidth: 100%;\nheight: 100%;\ntop: 0;\nleft: 0;"
+      ]
+   },
+   "max-width none": {
+      "scope": "scss,css",
+      "prefix": "mwn",
+      "body": [
+         "max-width: none;"
+      ],
+   },
+   "Ширина 100%": {
+      "scope": "scss,css",
+      "prefix": "wf",
+      "body": [
+         "width: 100%;"
+      ]
+   },
+   "Высота 100%": {
+      "scope": "scss,css",
+      "prefix": "hf",
+      "body": [
+         "height: 100%;"
+      ]
+   },
+   "Анимация": {
+      "scope": "scss,css",
+      "prefix": "animation",
+      "body": [
+         "animation: ${1:name} ${2:1s} ${3:ease} ${4:infinite} ${5:alternate} ${6:0s} ${7:forwards};"
+      ]
+   },
+   "Ключевые кадры": {
+      "scope": "scss,css",
+      "prefix": "kf",
+      "body": [
+         "@keyframes $1 {\n\t0%{\n\t   $2\n\t}\n\t50%{\n\t  $3\n\t}\n\t100%{\n\t $4\n\t}\n}\n$5"
+      ]
+   },
+   "Подключение шаблонов": {
+      "scope": "scss,css",
+      "prefix": "ex",
+      "body": [
+         "@extend ${1:};"
+      ]
+   },
+   "Адаптивные изображения": {
+      "scope": "scss,css",
+      "prefix": "is",
+      "body": [
+         "img{max-width: 100%;}"
+      ]
+   },
+   "Фон": {
+      "scope": "scss,css",
+      "prefix": "bg+",
+      "body": [
+         "background: url(\"♔img$1\") 0 0 no-repeat;"
+      ]
+   },
+   "Ibg": {
+      "scope": "scss,css",
+      "prefix": "ibg",
+      "body": [
+         "position: absolute;\nwidth: 100%;\nheight: 100%;\ntop: 0;\nleft: 0;\nobject-fit: cover;\nz-index: 1;"
+      ]
+   },
+   "Адаптивная картинка в колонке": {
+      "scope": "scss,css",
+      "prefix": "adimgcolumn",
+      "body": "position: relative;\noverflow: hidden;\n// container 1000\n// slide height 400\n// 400/1000  *100\npadding: 0 0 58% 0;\nimg {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\tobject-fit: cover;\n}"
+   },
+   "Адаптивная картинка в ряду": {
+      "scope": "scss,css",
+      "prefix": "adimgrow",
+      "body": "position: relative;\nmin-height: to-rem(150);\nimg {\n\twidth: 100%;\n\theight: 100%;\n\tobject-fit: cover;\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n}"
+   },
+   "Последний элемент внешний отступ 0": {
+      "scope": "scss,css",
+      "prefix": "lcm",
+      "body": [
+         "&:last-child{margin: 0;}"
+      ]
+   },
+   "Закругление 50%": {
+      "scope": "scss,css",
+      "prefix": "br5",
+      "body": [
+         "border-radius: 50%;"
+      ]
+   },
+   "Тень блока rgba": {
+      "scope": "scss,css",
+      "prefix": "bss",
+      "body": [
+         "box-shadow: 0 0 to-rem(5) rgba(#000, 0.3);"
+      ],
+   },
+   "Затемненный фон": {
+      "scope": "scss,css",
+      "prefix": "bgco",
+      "body": [
+         "background: rgba(#000, 0.5);"
+      ]
+   },
+   "Safe bg": {
+      "scope": "scss",
+      "prefix": "safebg",
+      "body": [
+         "\t\tposition: relative;",
+         "\t\t&:before {",
+         "\t\t\tcontent: \"\";",
+         "\t\t\tpointer-events: none;",
+         "\t\t\tposition: absolute;",
+         "\t\t\twidth: 300%;",
+         "\t\t\theight: 300%;",
+         "\t\t\ttop: 50%;",
+         "\t\t\tleft: 50%;",
+         "\t\t\ttransform: translate(-50%, -50%);",
+         "\t\t\tbackground: radial-gradient(circle, #fff 0%, rgba(0, 0, 0, 0) 100%);",
+         "\t\t\tz-index: -1;",
+         "\t\t}"
+      ]
+   },
+   "Media Selectors": {
+      "scope": "scss",
+      "prefix": "mdsel",
+      "body": [
+         "> img,",
+         "> picture img,",
+         "> video,",
+         "> svg,",
+         "> iframe {",
+         "\t$0",
+         "}"
+      ]
+   }
+}

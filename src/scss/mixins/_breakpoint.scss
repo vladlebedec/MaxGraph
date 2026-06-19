@@ -1,0 +1,43 @@
+/* stylelint-disable */
+
+@mixin for-desktop {
+   @media (min-width: (to-rem(1441))) {
+      @content;
+   }
+}
+
+@mixin big-desktop {
+   @media (max-width: (to-rem(1440))) {
+      @content;
+   }
+}
+
+@mixin desktop {
+   @media (max-width: (to-rem(1280))) {
+      @content;
+   }
+}
+
+@mixin tablet {
+   @media (max-width: (to-rem(1024))) {
+      @content;
+   }
+}
+
+@mixin small-tablet {
+   @media (max-width: (to-rem(768))) {
+      @content;
+   }
+}
+
+@mixin small-tablet-min {
+   @media (min-width: (to-rem(769))) {
+      @content;
+   }
+}
+
+@mixin mobile {
+   @media (max-width: (to-rem(576))) {
+      @content;
+   }
+}

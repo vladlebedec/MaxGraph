@@ -1,0 +1,309 @@
+{
+   "Console Log without env": {
+      "scope": "javascript",
+      "prefix": "cll",
+      "body": "console.log($1);",
+   },
+   "Named function": {
+      "scope": "javascript",
+      "prefix": "nfn",
+      "body": [
+         "function $1($2) {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Function": {
+      "scope": "javascript",
+      "prefix": "fn",
+      "body": [
+         "function ($1) {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Anonymous Function": {
+      "scope": "javascript",
+      "prefix": "afn",
+      "body": [
+         "(function $1($2) {",
+         "\t$0",
+         "})();"
+      ]
+   },
+   "Constant Inline Function": {
+      "scope": "javascript",
+      "prefix": "cifn",
+      "body": [
+         "const $1 = ($2) => {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Inline Function": {
+      "scope": "javascript",
+      "prefix": "ifn",
+      "body": [
+         "($1) => {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Inline Function(one line)": {
+      "scope": "javascript",
+      "prefix": "ifno",
+      "body": [
+         "($1) => $0"
+      ]
+   },
+   "IF/ELSE Condition": {
+      "scope": "javascript",
+      "prefix": "ifc",
+      "body": [
+         "if ($1) {",
+         "\t$0",
+         "}${2: else {",
+         "\t$3",
+         "\\}}"
+      ]
+   },
+   "IF One line": {
+      "scope": "javascript",
+      "prefix": "ifco",
+      "body": [
+         "if ($1) $0"
+      ]
+   },
+   "Compact IF": {
+      "scope": "javascript",
+      "prefix": "cifc",
+      "body": [
+         "if (!$1) return;",
+         "",
+         "$0"
+      ]
+   },
+   "Array Method": {
+      "scope": "javascript",
+      "prefix": "arrmh",
+      "body": [
+         "${1|forEach,map,filter,reduce,some|}((${2:item}) => {",
+         "\t$0",
+         "})"
+      ]
+   },
+   "Delagation": {
+      "scope": "javascript",
+      "prefix": "dlg",
+      "body": [
+         "if (${1:event}.target.closest(\"$2\")) {",
+         "\t$0",
+         "}"
+      ]
+   },
+   "Compact Delegation": {
+      "scope": "javascript",
+      "prefix": "delegation",
+      "body": [
+         "if (!${1:event}.target.closest(\"$2\")) return;",
+         "",
+         "$0"
+      ]
+   },
+   "? Condition": {
+      "scope": "javascript",
+      "prefix": "?if",
+      "body": [
+         "$1 ? $2 : $3"
+      ]
+   },
+   "Swiper config": {
+      "scope": "javascript",
+      "prefix": "swiper",
+      "body": [
+         "(async () => {",
+         "\tconst {default: Swiper} = await import(/* webpackPreload: true */ 'swiper');",
+         "\tconst {Keyboard, Navigation, Lazy, Autoplay} = await import(/* webpackPreload: true */ 'swiper/modules');",
+         "\tnew Swiper(\".$1\", {",
+         "\t\tmodules: [Keyboard, Navigation, Lazy, Autoplay],",
+         "\t\tgrabCursor: true,",
+         "\t\tslidesPerView: $2,",
+         "\t\tspaceBetween: 30,",
+         "\t\tloop: true,",
+         "\t\t// centeredSlides: true,${3:",
+         "\t\tpagination: {",
+         "\t\t\tel: \".$1 .swiper-pagination\",",
+         "\t\t\tclickable: true,",
+         "\t\t\tdynamicBullets: true, // Показывать только несколько точек",
+         "\t\t\t// type: \"bullets\", // \"bullets\", \"fraction\", \"progressbar\", \"custom\"",
+         "\t\t\t// renderBullet: (index, className) => \"<span class=\"\" + className + \"\">\" + (index + 1) + \"</span>\", // Точки с номером",
+         "\t\t\\},}${4:",
+         "\t\tnavigation: {",
+         "\t\t\tnextEl: \".$1 .swiper-button-next\",",
+         "\t\t\tprevEl: \".$1 .swiper-button-prev\",",
+         "\t\t\\},}${5:",
+         "\t\tscrollbar: {",
+         "\t\t\tel: \".$1 .swiper-scrollbar\",",
+         "\t\t\tdraggable: true,",
+         "\t\t\tsnapOnRelease: true, // Установите значение true, чтобы привязать положение ползунка к слайдам, когда вы отпускаете полосу прокрутки.",
+         "\t\t\\},}",
+         "\t\tautoplay: {",
+         "\t\t\tdelay: 1500,",
+         "\t\t\tdisableOnInteraction: false, // Установите значение false, и авто воспроизведение не будет отключено после взаимодействия с пользователем, оно будет перезапускаться каждый раз после взаимодействия.",
+         "\t\t\tpauseOnMouseEnter: true,",
+         "\t\t\t// stopOnLastSlide: true, // Остановить на последнем",
+         "\t\t\\},",
+         "\t\tkeyboard: {},",
+         "\t\tmousewheel: {},",
+         "\t\tbreakpoints: {",
+         "\t\t\t1: {",
+         "\t\t\t\tslidesPerView: 3,",
+         "\t\t\t},",
+         "\t\t\t481: {",
+         "\t\t\t\tslidesPerView: 4,",
+         "\t\t\t},",
+         "\t\t\t769: {",
+         "\t\t\t\tslidesPerView: 5,",
+         "\t\t\t}",
+         "\t\t}",
+         "\t});",
+         "})();"
+      ]
+   },
+   "Granim config": {
+      "scope": "javascript",
+      "prefix": "granim",
+      "body": [
+         "const gradient = new Granim({ // https://sarcadass.github.io/granim.js/api-v2.0.0.html",
+         "\telement: \".${1:_gradient}\", // ! Должен быть canvas",
+         "\tdirection: \"${2|radial,diagonal,left-right,top-bottom|}\", // Направление \"diagonal\", \"left-right\", \"top-bottom\", \"radial\"",
+         "\tloop: true, // Цикличность",
+         "\tstates: {",
+         "\t\t\"default-state\": {",
+         "\t\t\tgradients: [",
+         "\t\t\t\t[\"#ff9966\", \"#ff5e62\"],",
+         "\t\t\t\t[\"#00F260\", \"#0575E6\"],",
+         "\t\t\t\t[\"#e1eec3\", \"#f05053\"]",
+         "\t\t\t],",
+         "\t\t\ttransitionSpeed: ${3:1000}, // Скорость",
+         "\t\t}",
+         "\t}",
+         "});"
+      ]
+   },
+   "Fullcalendar config": {
+      "scope": "javascript",
+      "prefix": "fullcalendar",
+      "body": [
+         "const calendarElement = document.body.querySelector(\".${1:_calendar}\");",
+         "const calendar = new FullCalendar.Calendar(calendarElement, { // https://fullcalendar.io/docs/",
+         "\theaderToolbar: { // Настройки верхней панели",
+         "\t\tleft: \"prev,next today\",",
+         "\t\tcenter: \"title\",",
+         "\t\tright: \"dayGridMonth,dayGridWeek\"",
+         "\t},",
+         "\ttitleFormat: {year: \"numeric\", month: \"long\"}, // Вид заголовка даты",
+         "\tfirstDay: 1, // Первый день (1 = Monday)",
+         "\tcontentHeight: \"auto\", // Высота",
+         "\tevents: [ // События",
+         "\t\t{",
+         "\t\t\tid: \"now\",",
+         "\t\t\ttitle: \"Usually event\",",
+         "\t\t\tstart: \"2021-10-04\",",
+         "\t\t\tend: \"2021-10-08\"",
+         "\t\t},",
+         "\t],",
+         "",
+         "});",
+         "calendar.render();"
+      ]
+   },
+   "LightGallery config": {
+      "scope": "javascript",
+      "prefix": "lightgallery",
+      "body": [
+         "// _gallery - Галерея",
+         "// _gallery-item - Картинка",
+         "const galleryItems = document.body.querySelectorAll(\".${1:_gallery-item}\");",
+         "galleryItems.forEach(galleryItem => galleryItem.setAttribute(\"data-src\", galleryItem.querySelector(\"img\").getAttribute(\"data-src\")));",
+         "lightGallery(document.body.querySelector(\".${2:_gallery}\"), { // https://www.lightgalleryjs.com/docs/getting-started/",
+         "\tlicenseKey: \"7EC452A9-0CFD441C-BD984C7C-17C8456E\",",
+         "\tplugins: [lgThumbnail, lgFullscreen], // Подключенные плагины",
+         "\tselector: \".${3:_gallery-item}\",",
+         "\tdownload: false, // Значок загрузки",
+         "\texThumbImage: \"data-src\", // Атрибут миниатюр",
+         "\tmousewheel: true, // Управление мышью",
+         "\t// hideBarsDelay: 1000, // Убрать инструменты через",
+         "});"
+      ]
+   },
+   "Click Listener": {
+      "scope": "javascript",
+      "prefix": "addclick",
+      "body": [
+         "addEventListener(\"click\", debounce(function ($1) {",
+         "\t$0",
+         "}, ${2: 250}, {\"l\": 1, \"t\": 0}));"
+      ]
+   },
+   "Handle Cache": {
+      "scope": "javascript",
+      "prefix": "hdc",
+      "body": [
+         "return _handleCache(\"$1\", $2, arguments);"
+      ]
+   },
+   "Class": {
+      "scope": "javascript",
+      "prefix": "cls",
+      "body": [
+         "/**",
+         " * Класс представляющий $1",
+         " * @class",
+         " */",
+         "class $1 {",
+         "\t/** Префикс для имени события */",
+         "\tstatic #eventPrefix = \"_app_.$2.\";",
+         "\t/** Объект с полными названиями событий */",
+         "\tstatic events = {",
+         "\t\tonChange: this.#eventPrefix + \"onChange\",",
+         "\t};",
+         "\t/** Объект с экземплярами событий */",
+         "\tstatic #events = {",
+         "\t\t/** Вызывается после любого изменения в `$1` */",
+         "\t\tonChange: new Event(this.events.onChange, {bubbles: true, cancelable: true}),",
+         "\t};",
+         "\t/** Флаг, указывающий, был ли инициирован */",
+         "\tstatic #wasInit;",
+         "\t/** Инициировать */",
+         "\tstatic #init() {",
+         "\t\tif (this.#wasInit) return;",
+         "\t\tthis.#wasInit = true;",
+         "",
+         "\t}",
+         "\t/**",
+         "\t * Создает Элемент `$1`",
+         "\t * @param {Element} el Элемент `$1`",
+         "\t * @property {Element} el Элемент `$1`",
+         "\t */",
+         "\tconstructor(el) {",
+         "\t\tel._app_ ??= {};",
+         "\t\tel._app_.$2 = this;",
+         "",
+         "\t\tthis.el = el;",
+         "\t\t$3",
+         "",
+         "\t\t$1.#init();",
+         "\t}",
+         "}"
+      ]
+   },
+   "API Item": {
+      "scope": "javascript",
+      "prefix": "appitem",
+      "body": [
+         "$1._app_ ??= {};",
+         "$1._app_.$2 = new $3($1);"
+      ]
+   }
+}
