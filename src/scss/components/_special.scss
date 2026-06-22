@@ -56,6 +56,12 @@
     min-height: em(60);
     background: #005fa8;
     border-radius: em(999);
+
+    @include mobile {
+      min-width: 0;
+      width: 100%;
+    }
+
     span {
       font-weight: 500;
       font-size: em(18);

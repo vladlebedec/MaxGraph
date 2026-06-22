@@ -37,6 +37,10 @@
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
+
+    @include mobile {
+      aspect-ratio: 1/0.55;
+    }
     &:before {
       content: "";
       position: absolute;

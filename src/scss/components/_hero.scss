@@ -6,6 +6,11 @@
     display: flex;
     align-items: center;
     min-height: em(680);
+
+    @include mobile {
+      align-items: flex-start;
+      padding-top: em(160);
+    }
   }
   span {
     font-weight: 500;
@@ -63,6 +68,10 @@
     background: #005fa8;
     border-radius: 999px;
     max-width: em(266);
+
+    @include mobile {
+      max-width: none;
+    }
   }
   &__text-cont {
     display: flex;

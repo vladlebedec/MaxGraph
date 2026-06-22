@@ -9,6 +9,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: em(48);
+    gap: em(16);
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
   &__title {
     font-weight: 600;
@@ -28,6 +34,11 @@
     border-radius: em(999);
     max-width: em(564);
     flex: 1 1 auto;
+
+    @include small-tablet {
+      max-width: none;
+      flex-wrap: wrap;
+    }
   }
   &__button {
     display: flex;
@@ -51,6 +62,15 @@
   background: #0e1216;
   border: em(1) solid #3b4650;
   border-radius: em(16);
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobile {
+    padding: em(24);
+  }
+
   @media (min-width: (to-rem(1280))) {
     margin: 0 em(-40);
   }
@@ -78,6 +98,10 @@
   &__flex {
     display: flex;
     gap: em(28);
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
   }
   &__item {
     display: flex;
@@ -106,6 +130,10 @@
     gap: em(16);
     flex-wrap: wrap;
     max-width: em(450);
+
+    @include small-tablet {
+      max-width: none;
+    }
   }
   &__icon-button {
     flex: 1 1 auto;
@@ -140,5 +168,9 @@
     max-width: em(564);
     aspect-ratio: 1/0.67;
     filter: invert(0.92) hue-rotate(180deg);
+
+    @include tablet {
+      max-width: none;
+    }
   }
 }

@@ -4,6 +4,11 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: em(16);
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
   &__tabs {
     display: inline-flex;
@@ -14,6 +19,13 @@
     border-radius: em(999);
     padding: em(4);
     min-width: em(564);
+
+    @include small-tablet {
+      min-width: 0;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   &__tab-btn {
@@ -76,6 +88,10 @@
   &__body {
     box-sizing: border-box;
     padding: em(40);
+
+    @include mobile {
+      padding: em(24);
+    }
   }
   &__grid-text {
     flex: 1 1 auto;
@@ -129,6 +145,10 @@
       line-height: em(20);
 
       color: #ffffff;
+
+      @include mobile {
+        max-width: none;
+      }
     }
   }
   &__hero {
@@ -154,11 +174,22 @@
     gap: em(32);
     background: rgba(30, 37, 44, 1);
     border-radius: em(12);
+
+    @include tablet {
+      flex-direction: column;
+    }
+
     img {
       max-height: em(420);
 
       background: #3b4650;
       border-radius: em(12);
+
+      @include tablet {
+        max-height: none;
+        max-width: 100%;
+        height: auto;
+      }
     }
   }
 }

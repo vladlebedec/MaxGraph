@@ -101,6 +101,11 @@
     img {
       max-width: 100%;
       height: em(121);
+
+      @include mobile {
+        height: auto;
+        max-height: em(121);
+      }
     }
   }
   &__text {

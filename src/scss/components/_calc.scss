@@ -7,6 +7,10 @@
     text-align: center;
     padding: em(60) em(40);
 
+    @include mobile {
+      padding: em(40) em(20);
+    }
+
     h3 {
       font-weight: 600;
       font-size: em(28);
@@ -36,6 +40,10 @@
 
     border: em(1) solid #3b4650;
     border-radius: em(16);
+
+    @include mobile {
+      padding: em(24);
+    }
   }
 
   &__footer {
@@ -49,6 +57,12 @@
       text-edge: cap;
 
       color: #6e7c89;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: em(12);
     }
   }
   &__footer-item {
@@ -71,6 +85,11 @@
   }
   &__grid-item {
     max-width: em(365);
+
+    @include tablet {
+      max-width: none;
+    }
+
     & > p {
       font-size: em(14);
       @function em($one, $two: 14) {
@@ -114,6 +133,15 @@
     gap: em(32);
     max-width: em(1160);
     margin-bottom: em(64);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: em(16);
+    }
   }
   &__hero {
     h2 {

@@ -29,6 +29,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: em(32);
     margin-bottom: em(48);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
   &__hero {
     align-self: flex-start;
@@ -52,6 +60,11 @@
     display: flex;
     gap: em(8);
     align-items: flex-start;
+
+    @include mobile {
+      max-width: none;
+    }
+
     & > img {
       width: 100%;
       border-radius: em(12);

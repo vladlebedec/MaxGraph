@@ -257,39 +257,36 @@
       }
     }
   }
-
+  &__tabs-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+  }
   &__tabs {
     display: inline-flex;
-    justify-content: center;
     gap: em(8);
 
     background: rgba(30, 37, 44, 1);
     border-radius: em(999);
     padding: em(4);
     margin-bottom: em(49);
-    /* Tabs / Item */
   }
 
   &__tab-btn {
-    /* Tabs */
-
     padding: em(12) em(20);
-    font-family: "Google Sans";
     font-size: em(16);
     line-height: em(22);
     color: rgba(233, 240, 245, 0.6);
     border-radius: em(999);
+    white-space: nowrap;
     cursor: pointer;
     transition:
       color 0.2s ease,
       background 0.2s ease,
       border-color 0.2s ease;
-
     &:hover {
       color: #e9f0f5;
       background: rgba(255, 255, 255, 0.12);
     }
-
     &.is-active {
       color: rgba(14, 18, 22, 1);
       background: rgba(230, 244, 255, 1);

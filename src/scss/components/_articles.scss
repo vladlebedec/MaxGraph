@@ -41,6 +41,10 @@
       min-width: em(340);
       min-height: em(60);
     }
+    @include small-tablet {
+      min-width: 0;
+      width: 100%;
+    }
     span {
       font-weight: 500;
       font-size: em(18);

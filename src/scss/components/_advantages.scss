@@ -7,6 +7,18 @@
     grid-template-columns: repeat(4, 1fr);
     gap: em(32);
     max-width: em(1160);
+
+    @include big-desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
   &__grid-item {
     max-width: em(365);
@@ -32,6 +44,10 @@
   }
   &__grid-item_last {
     grid-row: span 2;
+
+    @include mobile {
+      grid-row: span 1;
+    }
   }
 
   &__hero {
