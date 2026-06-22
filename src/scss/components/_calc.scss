@@ -80,6 +80,9 @@
       color: #6e7c89;
       margin-bottom: em(8);
     }
+    &:has(> button) {
+      align-self: end;
+    }
     button {
       /* Button */
 
