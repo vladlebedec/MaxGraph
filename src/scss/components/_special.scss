@@ -1,0 +1,69 @@
+.special {
+  padding-top: em(48);
+  padding-bottom: em(96);
+  background: rgba(30, 37, 44, 1);
+  border-radius: 0 0 em(24) em(24);
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__logos-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: em(8);
+    margin-bottom: em(16);
+    img {
+      font-size: em(96);
+      flex: 0 0 1em;
+      width: 1em;
+      height: 1em;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: em(36);
+    @function em($one, $two: 36) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(40);
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin-bottom: em(20);
+    max-width: to-rem(550);
+  }
+  &__sub-title {
+    font-size: em(16);
+    @function em($one, $two: 16) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(22);
+    text-align: center;
+    color: #e9f0f5;
+    margin-bottom: em(28);
+    max-width: to-rem(250);
+  }
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: em(20) em(32);
+    gap: em(8);
+    min-width: em(266);
+    min-height: em(60);
+    background: #005fa8;
+    border-radius: em(999);
+    span {
+      font-weight: 500;
+      font-size: em(18);
+      @function em($one, $two: 18) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(20);
+      color: #ffffff;
+    }
+  }
+}

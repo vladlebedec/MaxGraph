@@ -380,14 +380,9 @@
       @return prc($one, $two, 1) + 0em;
     }
     line-height: em(26);
-
-    /* Color/Neutral/0 */
     color: #ffffff;
   }
   &__flex {
-    /* Contact */
-
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -409,20 +404,12 @@
     color: #5db7f3;
   }
   &__title {
-    /* Address Label */
-
-    width: 134px;
-    height: 9px;
-    font-style: normal;
     font-weight: 400;
     font-size: em(12);
     @function em($one, $two: 12) {
       @return prc($one, $two, 1) + 0em;
     }
     line-height: em(18);
-    leading-trim: both;
-    text-edge: cap;
-
     color: #6e7c89;
   }
 }

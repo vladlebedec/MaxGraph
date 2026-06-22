@@ -100,3 +100,31 @@ addEventListener("click", (event) => {
     _slide.down(content);
   }
 });
+
+const buttonsArticles = document.querySelectorAll(".articles__button");
+new Swiper(".swiper-articles", {
+  loop: false,
+  spaceBetween: 32,
+  navigation: {
+    prevEl: buttonsArticles[0],
+    nextEl: buttonsArticles[1],
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    480: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 2,
+    },
+    1024: {
+      slidesPerView: 4,
+      slidesPerGroup: 2,
+    },
+  },
+});
