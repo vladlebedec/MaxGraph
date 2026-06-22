@@ -1,6 +1,8 @@
 .howtoget {
   padding: em(96) 0;
-
+    @include small-tablet {
+   padding: to-rem(40) 0;
+  }
   background: #1e252c;
   border-radius: em(24);
   &__body {
@@ -41,7 +43,7 @@
   &__hero {
     align-self: flex-start;
     font-weight: 600;
-    font-size: em(36);
+    font-size: to-rem(36);
     @function em($one, $two: 36) {
       @return prc($one, $two, 1) + 0em;
     }
@@ -49,6 +51,9 @@
     letter-spacing: -0.01em;
     color: #ffffff;
     margin-bottom: em(48);
+    @include small-tablet {
+      margin-bottom: to-rem(24);
+    }
   }
   &__item {
     max-width: em(365);

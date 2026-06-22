@@ -7,7 +7,7 @@
   }
   &__title {
     font-weight: 600;
-    font-size: em(36);
+    font-size: to-rem(36);
     @function em($one, $two: 36) {
       @return prc($one, $two, 1) + 0em;
     }

@@ -1,7 +1,10 @@
 .calc {
   padding-top: em(120);
   padding-bottom: em(60);
-
+   @include small-tablet {
+      padding-top: to-rem(80);
+      padding-bottom: to-rem(40);
+   }
   &__success {
     display: none;
     text-align: center;
@@ -48,7 +51,7 @@
 
   &__footer {
     p {
-      font-size: em(12);
+      font-size: to-rem(12);
       @function em($one, $two: 12) {
         @return prc($one, $two, 1) + 0em;
       }
@@ -91,7 +94,7 @@
     }
 
     & > p {
-      font-size: em(14);
+      font-size: to-rem(14);
       @function em($one, $two: 14) {
         @return prc($one, $two, 1) + 0em;
       }
@@ -141,13 +144,14 @@
     @include mobile {
       grid-template-columns: 1fr;
       gap: em(16);
+      margin-bottom: em(32);
     }
   }
   &__hero {
     h2 {
       margin-bottom: em(20);
       font-weight: 600;
-      font-size: em(36);
+      font-size: to-rem(36);
       @function em($one, $two: 36) {
         @return prc($one, $two, 1) + 0em;
       }
@@ -215,7 +219,7 @@
     flex-direction: row;
     align-items: center;
     padding: em(16) em(24);
-
+font-size: 1rem;
     background: #1e252c;
     border: em(1) solid #6e7c89;
     border-radius: em(999);
@@ -231,7 +235,7 @@
     align-items: center;
 
     font-weight: 600;
-    font-size: em(36);
+    font-size: to-rem(36);
     @function em($one, $two: 36) {
       @return prc($one, $two, 1) + 0em;
     }

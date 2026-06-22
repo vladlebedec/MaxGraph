@@ -1,6 +1,9 @@
 .footer {
   padding-top: em(56);
   padding-bottom: em(60);
+        @include small-tablet {
+   padding: to-rem(24) 0;
+  }
   &__body {
   }
 }
@@ -8,10 +11,12 @@
   display: flex;
   gap: em(32);
   justify-content: space-between;
+  padding: em(64) 0;
   @include tablet {
     flex-direction: column;
+    font-size: 0.9rem;
+    padding: em(24) 0;
   }
-  padding: em(64) 0;
   border-bottom: 1px solid rgba(30, 37, 44, 1);
   &__info {
     display: flex;
@@ -88,6 +93,7 @@
   background: #0e1216;
   border-radius: em(12);
   position: relative;
+  overflow: hidden;
   @include small-tablet-min {
     min-width: em(364);
   }
@@ -268,6 +274,8 @@
   }
   @include mobile {
     grid-template-columns: 1fr;
+    font-size: 0.9rem;
+    padding: em(24) 0;
   }
   &__item {
     display: flex;
@@ -307,6 +315,10 @@
   flex-direction: column;
   gap: em(24);
   padding-top: em(64);
+  @include small-tablet {
+   font-size: 0.8rem;
+   padding-top: em(24);
+  }
   ul {
     padding-left: 1em;
   }
