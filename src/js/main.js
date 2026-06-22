@@ -3,6 +3,7 @@ import vars from "./_vars";
 import "./_functions";
 import "./_components";
 import Swiper from "swiper/bundle";
+import { _slide } from "./functions/slide";
 
 new Swiper(".swiper-hero", {
   loop: false,
@@ -67,4 +68,35 @@ new Swiper(".swiper-reviews", {
       slidesPerGroup: 2,
     },
   },
+});
+
+document
+  .querySelectorAll(".faq-spoilers__item")
+  .forEach((item) => (item.lastElementChild.style.display = "none"));
+
+addEventListener("click", (event) => {
+  const item = event.target.closest(".faq-spoilers__item");
+  if (!item) return;
+
+  const button = item.firstElementChild;
+  const content = item.lastElementChild;
+
+  if (content.classList.contains("slide")) return;
+
+  if (item.classList.contains("faq-spoilers__item_active")) {
+    item.parentElement._openedSpoiler = null;
+    item.classList.remove("faq-spoilers__item_active");
+    _slide.up(content);
+  } else {
+    if (item.parentElement._openedSpoiler) {
+      item.parentElement._openedSpoiler.classList.remove(
+        "faq-spoilers__item_active",
+      );
+      _slide.up(item.parentElement._openedSpoiler.lastElementChild);
+    }
+
+    item.classList.add("faq-spoilers__item_active");
+    item.parentElement._openedSpoiler = item;
+    _slide.down(content);
+  }
 });

@@ -1,6 +1,8 @@
 .faq {
   padding-top: em(96);
   padding-bottom: em(64);
+  background: rgba(30, 37, 44, 1);
+  border-radius: em(24);
   &__body {
   }
   &__title {
@@ -23,10 +25,11 @@
   &__item {
     display: flex;
     flex-direction: column;
-    gap: em(16);
     background: #3b4650;
     border-radius: em(12);
+    @include transition();
     &_active {
+      padding-bottom: em(20);
       .faq-spoilers {
         &__button {
           &:after {
@@ -72,8 +75,7 @@
     }
     line-height: em(20);
     color: #ffffff;
-    padding: em(20);
-    padding-top: 0;
+    padding: 0 em(20);
   }
 }
 .question {
