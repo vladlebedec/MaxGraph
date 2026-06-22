@@ -1,0 +1,112 @@
+.reviews {
+  padding: em(120) 0;
+  &__body {
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: em(16);
+    flex-wrap: wrap;
+    @include small-tablet {
+      justify-content: center;
+    }
+    margin-bottom: em(48);
+  }
+  &__title {
+    display: inline-flex;
+    gap: em(16);
+    align-items: center;
+    img {
+      font-size: em(24);
+      width: 1em;
+      height: 1em;
+      flex: 0 0 1em;
+    }
+    span {
+      font-weight: 600;
+      font-size: em(36);
+      @function em($one, $two: 36) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(40);
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+  }
+  &__buttons {
+    display: inline-flex;
+    gap: em(16);
+  }
+  &__button {
+  }
+}
+.review-item {
+  &,
+  &.swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: em(20) em(16);
+    gap: em(20);
+    background: #1e252c;
+    border-radius: em(12);
+  }
+  &__rating {
+    display: flex;
+    gap: em(3);
+    img {
+      font-size: em(16);
+      width: 1em;
+      height: 1em;
+      flex: 0 0 1em;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: em(16);
+    p {
+      font-size: em(14);
+      @function em($one, $two: 14) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(20);
+      color: #e9f0f5;
+    }
+  }
+  &__user {
+    display: flex;
+    gap: em(12);
+    align-items: center;
+    img {
+      font-size: em(44);
+      width: 1em;
+      height: 1em;
+      flex: 0 0 1em;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+    gap: em(4);
+  }
+  &__user-name {
+    font-size: em(16);
+    @function em($one, $two: 16) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(22);
+    color: #ffffff;
+  }
+  &__user-date {
+    font-size: em(12);
+    @function em($one, $two: 12) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(18);
+    color: #6e7c89;
+  }
+}

@@ -6,16 +6,11 @@
     <div class="site-container">
       @include('partials/header.html')
       <main class="main">
-        <div class="hero">
-          <video
-            class="lazy hero__video"
-            data-src="./img/camry.webm"
-            autoplay
-            muted
-            loop
-            playsinline
-          />
-        </div>
+        @include('partials/hero.html')
+        <div class="gradient"></div>
+        @include('partials/calc.html') @include('partials/advantages.html')
+        @include('partials/loanreq.html') @include('partials/clientswiper.html')
+        @include('partials/howtoget.html') @include('partials/reviews.html')
       </main>
       @include('partials/footer.html')
     </div>

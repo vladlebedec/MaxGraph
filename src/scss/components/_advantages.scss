@@ -1,0 +1,54 @@
+.advantages {
+  padding: em(60) 0;
+  &__body {
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: em(32);
+    max-width: em(1160);
+  }
+  &__grid-item {
+    max-width: em(365);
+    min-height: em(160);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: em(16) em(12) em(12) em(16);
+    gap: em(24);
+    background: #1e252c;
+    border-radius: em(12);
+
+    & > p {
+      font-size: em(16);
+      @function em($one, $two: 16) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(22);
+
+      color: #ffffff;
+    }
+  }
+  &__grid-item_last {
+    grid-row: span 2;
+  }
+
+  &__hero {
+    h2 {
+      margin-bottom: em(20);
+      font-weight: 600;
+      font-size: em(36);
+      @function em($one, $two: 36) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(40);
+      letter-spacing: -0.01em;
+
+      color: #ffffff;
+    }
+  }
+  &__item {
+    align-self: flex-end;
+  }
+}

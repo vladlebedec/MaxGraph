@@ -9,7 +9,7 @@
                "g"
             ],
             [
-               "(\n|^)font-family: Montserrat;[^\n]*",
+               "(\n|^)font-family: 'Google Sans';[^\n]*",
                "",
                "g"
             ],

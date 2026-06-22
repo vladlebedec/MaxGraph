@@ -1,0 +1,128 @@
+.client {
+  padding: em(60) 0;
+  padding-bottom: em(120);
+  &__body {
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: em(32);
+  }
+  &__grid-label {
+    font-size: em(12);
+    @function em($one, $two: 12) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(18);
+    leading-trim: both;
+    text-edge: cap;
+
+    color: #6e7c89;
+    margin-bottom: em(8);
+  }
+  &__grid-price {
+    font-weight: 600;
+    font-size: em(20);
+    @function em($one, $two: 20) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(28);
+    color: #ffffff;
+    margin-bottom: em(12);
+  }
+  &__grid-sum {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: em(8) em(24);
+    gap: em(12);
+    border: em(1) solid #3b4650;
+    border-radius: em(8);
+    font-weight: 500;
+    font-size: em(12);
+    @function em($one, $two: 12) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(18);
+    letter-spacing: em(2);
+    text-transform: uppercase;
+    color: #e9f0f5;
+  }
+  &__grid-item {
+    padding: em(8);
+    background: #1e252c;
+    border-radius: em(12);
+    @include small-tablet-min {
+      min-height: em(420);
+    }
+    &.swiper-slide {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      gap: em(16);
+    }
+    img {
+      object-fit: cover;
+      aspect-ratio: 1/0.8;
+      border-radius: em(8);
+      width: 100%;
+    }
+  }
+  &__grid-head {
+    flex: 1 1 auto;
+    h2 {
+      font-weight: 600;
+      font-size: em(20);
+      @function em($one, $two: 20) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(28);
+
+      color: #ffffff;
+    }
+    p {
+      font-size: em(12);
+      @function em($one, $two: 12) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(18);
+      leading-trim: both;
+      text-edge: cap;
+
+      color: #ffffff;
+    }
+  }
+  &__grid-footer {
+  }
+  &__hero {
+  }
+  &__hero-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: em(48);
+    h2 {
+      font-weight: 600;
+      font-size: em(36);
+      @function em($one, $two: 36) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(40);
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+  }
+  &__tab-btn {
+  }
+  &__tabs {
+  }
+}
+.container {
+}
+.swiper {
+}
+.swiper-slide {
+}
+.swiper-wrapper {
+}

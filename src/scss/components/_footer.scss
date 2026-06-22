@@ -1,0 +1,317 @@
+.footer {
+  padding-top: em(56);
+  padding-bottom: em(60);
+  &__body {
+  }
+}
+.footer-main {
+  display: flex;
+  gap: em(32);
+  justify-content: space-between;
+  @include tablet {
+    flex-direction: column;
+  }
+  padding: em(64) 0;
+  border-bottom: 1px solid rgba(30, 37, 44, 1);
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: em(64);
+    @include small-tablet {
+      gap: em(16);
+    }
+  }
+  &__logo {
+    img {
+      height: em(48);
+      max-width: 100%;
+    }
+  }
+  &__map-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: em(24);
+  }
+  &__address {
+    display: inline-flex;
+    flex-direction: column;
+    gap: em(8);
+    max-width: em(280);
+    span {
+      &:first-child {
+        font-size: em(12);
+        @function em($one, $two: 12) {
+          @return prc($one, $two, 1) + 0em;
+        }
+        line-height: em(18);
+        color: #6e7c89;
+      }
+      &:last-child {
+        font-size: em(16);
+        @function em($one, $two: 16) {
+          @return prc($one, $two, 1) + 0em;
+        }
+        line-height: em(22);
+        color: #ffffff;
+      }
+    }
+  }
+  &__logos {
+    display: flex;
+    flex-direction: column;
+    gap: em(8);
+  }
+  &__label {
+    font-size: em(14);
+    @function em($one, $two: 14) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(20);
+    color: #6e7c89;
+  }
+  &__logos-items {
+    display: flex;
+    gap: em(12);
+    flex-wrap: wrap;
+  }
+  &__logo-item {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.footer-main-box {
+  display: flex;
+  flex-direction: column;
+  padding: em(24) em(16);
+  gap: em(33);
+  background: #0e1216;
+  border-radius: em(12);
+  position: relative;
+  @include small-tablet-min {
+    min-width: em(364);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    font-size: em(800);
+    @function em($one, $two: 800) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    filter: blur(em(50));
+    width: 1em;
+    height: 1em;
+    top: em(-300);
+    left: em(-350);
+
+    background: radial-gradient(rgba(#83c9fe, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
+    z-index: -1;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: em(24);
+  }
+  &__big-link {
+    font-weight: 600;
+    font-size: em(28);
+    @function em($one, $two: 28) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(32);
+    letter-spacing: -0.005em;
+    color: #5db7f3;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__gray-txt {
+    font-size: em(12);
+    @function em($one, $two: 12) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(18);
+    color: #6e7c89;
+    padding-top: em(8);
+  }
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: em(16) em(20);
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__icon-button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: em(12) em(16);
+    gap: em(10);
+    min-height: em(52);
+    background: #1e252c;
+    border-radius: em(1000);
+    span {
+      font-weight: 500;
+      font-size: em(12);
+      @function em($one, $two: 12) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(18);
+      letter-spacing: em(2);
+      text-transform: uppercase;
+      color: #e6f4ff;
+    }
+    img {
+      font-size: em(28);
+      flex: 0 0 1em;
+      height: 1em;
+      width: 1em;
+    }
+  }
+  &__button {
+    grid-column: span 2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: em(20) em(32);
+    gap: em(8);
+    min-height: em(60);
+    background: #005fa8;
+    border-radius: em(999);
+    @include transition();
+    span {
+      font-weight: 500;
+      font-size: em(18);
+      @function em($one, $two: 18) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(20);
+      color: #ffffff;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    @include small-tablet {
+      grid-column: span 1;
+    }
+  }
+}
+.yandex-review {
+  display: flex;
+  flex-direction: column;
+  padding: em(12) em(16);
+  gap: em(12);
+  background: #1e252c;
+  border-radius: em(12);
+  min-width: em(203);
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: em(8);
+    align-items: center;
+  }
+  &__rating {
+    display: inline-flex;
+    align-items: center;
+    gap: em(4);
+    img {
+      font-size: em(18);
+      width: 1em;
+      height: 1em;
+      flex: 0 0 1em;
+    }
+    span {
+      font-size: em(18);
+      @function em($one, $two: 18) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(25);
+      color: #ffffff;
+    }
+  }
+  &__stars {
+    display: flex;
+    gap: em(3);
+    img {
+      font-size: em(16);
+      width: 1em;
+      height: 1em;
+      flex: 0 0 1em;
+    }
+  }
+  &__desc {
+    font-size: em(12);
+    @function em($one, $two: 12) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(18);
+    color: #a9b6c3;
+  }
+}
+.footer-nav {
+  padding: em(64) 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: em(32);
+  border-bottom: 1px solid rgba(30, 37, 44, 1);
+
+  @include big-desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include small-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: em(16);
+    h3 {
+      font-size: em(16);
+      @function em($one, $two: 16) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(22);
+      color: #ffffff;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: em(20);
+      a {
+        font-size: em(14);
+        @function em($one, $two: 14) {
+          @return prc($one, $two, 1) + 0em;
+        }
+        line-height: em(20);
+        color: #a9b6c3;
+      }
+    }
+  }
+}
+.footer-policy {
+  font-size: em(12);
+  @function em($one, $two: 12) {
+    @return prc($one, $two, 1) + 0em;
+  }
+  line-height: em(18);
+  color: #6e7c89;
+  display: flex;
+  flex-direction: column;
+  gap: em(24);
+  padding-top: em(64);
+  ul {
+    padding-left: 1em;
+  }
+  ul,
+  li {
+    list-style: disc;
+  }
+}

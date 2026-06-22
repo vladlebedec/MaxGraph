@@ -6,8 +6,8 @@ import { enableScroll } from './enable-scroll';
   const menu = document?.querySelector('[data-menu]');
   const overlay = document?.querySelector('[data-menu-overlay]');
   const closeBtn = document?.querySelector('[data-menu-close]');
-  const tabBtns = document?.querySelectorAll('[data-tab-btn]');
-  const tabPanels = document?.querySelectorAll('[data-tab-panel]');
+  const tabBtns = menu?.querySelectorAll('[data-tab-btn]');
+  const tabPanels = menu?.querySelectorAll('[data-tab-panel]');
 
   const openMenu = () => {
     menu?.classList.add('menu--active');

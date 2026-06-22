@@ -1,0 +1,97 @@
+.howtoget {
+  padding: em(96) 0;
+
+  background: #1e252c;
+  border-radius: em(24);
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    button {
+      padding: em(20) em(32);
+      max-width: em(266);
+      background: #005fa8;
+      border-radius: em(999);
+      font-weight: 500;
+      font-size: em(18);
+      @function em($one, $two: 18) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(20);
+
+      color: #ffffff;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: em(32);
+    margin-bottom: em(48);
+  }
+  &__hero {
+    align-self: flex-start;
+    font-weight: 600;
+    font-size: em(36);
+    @function em($one, $two: 36) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(40);
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin-bottom: em(48);
+  }
+  &__item {
+    max-width: em(365);
+    position: relative;
+    overflow: hidden;
+    border-radius: em(12);
+    aspect-ratio: 1 / 1.04;
+    padding: em(20);
+    display: flex;
+    gap: em(8);
+    align-items: flex-start;
+    & > img {
+      width: 100%;
+      border-radius: em(12);
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__item-text {
+    display: flex;
+    flex-direction: column;
+    gap: em(8);
+    h3 {
+      font-weight: 600;
+      font-size: em(20);
+      @function em($one, $two: 20) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(28);
+
+      color: #ffffff;
+    }
+    p {
+      font-size: em(14);
+      @function em($one, $two: 14) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(20);
+      color: #ffffff;
+    }
+  }
+  &__item-body {
+    display: flex;
+    position: relative;
+    z-index: 2;
+  }
+  &__item-icon {
+    flex: 0 0 em(48);
+    width: em(48);
+    height: em(48);
+  }
+}
