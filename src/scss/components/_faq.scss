@@ -1,0 +1,160 @@
+.faq {
+  padding-top: em(96);
+  padding-bottom: em(64);
+  &__body {
+  }
+  &__title {
+    font-weight: 600;
+    font-size: em(36);
+    @function em($one, $two: 36) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(40);
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin-bottom: em(48);
+  }
+}
+.faq-spoilers {
+  display: flex;
+  flex-direction: column;
+  gap: em(20);
+  margin-bottom: em(64);
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: em(16);
+    background: #3b4650;
+    border-radius: em(12);
+    &_active {
+      .faq-spoilers {
+        &__button {
+          &:after {
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+  &__button {
+    padding: em(20);
+    padding-right: em(20+24+8);
+    position: relative;
+    text-align: left;
+    span {
+      font-size: em(18);
+      @function em($one, $two: 18) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(26);
+      color: #ffffff;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      right: em(20);
+      top: 50%;
+      background: #fff;
+      width: em(20);
+      height: em(2);
+      transform: translateY(-50%);
+      @include transition();
+    }
+    &:after {
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+  &__content {
+    font-size: em(14);
+    @function em($one, $two: 14) {
+      @return prc($one, $two, 1) + 0em;
+    }
+    line-height: em(20);
+    color: #ffffff;
+    padding: em(20);
+    padding-top: 0;
+  }
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: em(16);
+  align-items: center;
+  padding: em(36);
+  border: em(1) solid #3b4650;
+  border-radius: em(16);
+  @include small-tablet {
+    justify-content: center;
+  }
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: em(24);
+    flex-wrap: wrap;
+    @include small-tablet {
+      justify-content: center;
+    }
+    img {
+      max-width: 100%;
+      height: em(121);
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: em(12);
+    span {
+      &:first-child {
+        font-weight: 600;
+        font-size: em(28);
+        @function em($one, $two: 28) {
+          @return prc($one, $two, 1) + 0em;
+        }
+        line-height: em(32);
+        letter-spacing: -0.005em;
+        color: #ffffff;
+      }
+      &:last-child {
+        font-size: em(16);
+        @function em($one, $two: 16) {
+          @return prc($one, $two, 1) + 0em;
+        }
+        line-height: em(22);
+        color: #e9f0f5;
+      }
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: em(20) em(40);
+    gap: em(8);
+    min-height: em(60);
+    background: #005fa8;
+    border-radius: em(999);
+    @include transition();
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    img {
+      font-size: em(20);
+      width: 1em;
+      height: 1em;
+      flex: 0 0 1em;
+    }
+    span {
+      font-weight: 500;
+      font-size: em(18);
+      @function em($one, $two: 18) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      line-height: em(20);
+      color: #ffffff;
+    }
+  }
+}
