@@ -1,6 +1,9 @@
 .map {
   padding-top: em(60);
   padding-bottom: em(120);
+      @include small-tablet {
+   padding: to-rem(40) 0;
+  }
   &__body {
   }
   &__head {
@@ -9,10 +12,16 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: em(48);
+    gap: em(16);
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
   &__title {
     font-weight: 600;
-    font-size: em(36);
+    font-size: to-rem(36);
     @function em($one, $two: 36) {
       @return prc($one, $two, 1) + 0em;
     }
@@ -28,6 +37,9 @@
     border-radius: em(999);
     max-width: em(564);
     flex: 1 1 auto;
+
+    @include small-tablet {
+    }
   }
   &__button {
     display: flex;
@@ -51,6 +63,15 @@
   background: #0e1216;
   border: em(1) solid #3b4650;
   border-radius: em(16);
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobile {
+    padding: em(24);
+  }
+
   @media (min-width: (to-rem(1280))) {
     margin: 0 em(-40);
   }
@@ -78,11 +99,18 @@
   &__flex {
     display: flex;
     gap: em(28);
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
   }
   &__item {
     display: flex;
     flex-direction: column;
     gap: em(8);
+    @include small-tablet {
+    font-size: 0.8rem;
+    }
   }
   &__link {
     font-family: "Google Sans";
@@ -106,6 +134,10 @@
     gap: em(16);
     flex-wrap: wrap;
     max-width: em(450);
+
+    @include small-tablet {
+      max-width: none;
+    }
   }
   &__icon-button {
     flex: 1 1 auto;
@@ -117,6 +149,9 @@
     min-height: em(52);
     background: #1e252c;
     border-radius: em(1000);
+    @include small-tablet {
+      font-size: 0.9rem;
+    }
     span {
       font-weight: 500;
       font-size: em(12);
@@ -140,5 +175,9 @@
     max-width: em(564);
     aspect-ratio: 1/0.67;
     filter: invert(0.92) hue-rotate(180deg);
+
+    @include tablet {
+      max-width: none;
+    }
   }
 }

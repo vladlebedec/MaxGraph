@@ -1,6 +1,9 @@
 .reviews {
   padding-top: em(96);
   padding-bottom: em(48);
+      @include small-tablet {
+   padding: to-rem(40) 0;
+  }
   &__body {
   }
   &__top {
@@ -26,7 +29,7 @@
     }
     span {
       font-weight: 600;
-      font-size: em(36);
+      font-size: to-rem(36);
       @function em($one, $two: 36) {
         @return prc($one, $two, 1) + 0em;
       }
@@ -38,6 +41,9 @@
   &__buttons {
     display: inline-flex;
     gap: em(16);
+    @include small-tablet {
+      display: none;
+    }
   }
   &__button {
   }

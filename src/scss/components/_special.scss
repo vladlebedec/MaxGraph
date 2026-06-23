@@ -3,6 +3,9 @@
   padding-bottom: em(96);
   background: rgba(30, 37, 44, 1);
   border-radius: 0 0 em(24) em(24);
+        @include small-tablet {
+   padding: to-rem(40) 0;
+  }
   &__body {
     display: flex;
     flex-direction: column;
@@ -24,7 +27,7 @@
   }
   &__title {
     font-weight: 600;
-    font-size: em(36);
+    font-size: to-rem(36);
     @function em($one, $two: 36) {
       @return prc($one, $two, 1) + 0em;
     }
@@ -56,6 +59,12 @@
     min-height: em(60);
     background: #005fa8;
     border-radius: em(999);
+
+    @include mobile {
+      min-width: 0;
+      width: 100%;
+    }
+
     span {
       font-weight: 500;
       font-size: em(18);

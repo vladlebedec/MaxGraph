@@ -1,6 +1,9 @@
 .client {
   padding: em(60) 0;
   padding-bottom: em(120);
+    @include small-tablet {
+   padding: to-rem(40) 0;
+  }
   &__body {
   }
 
@@ -8,6 +11,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: em(32);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
   &__grid-label {
     font-size: em(12);
@@ -57,6 +68,10 @@
     @include small-tablet-min {
       min-height: em(420);
     }
+    @include small-tablet {
+    font-size: 1.1rem;
+
+    }
     &.swiper-slide {
       display: flex;
       flex-direction: column;
@@ -104,7 +119,7 @@
     margin-bottom: em(48);
     h2 {
       font-weight: 600;
-      font-size: em(36);
+      font-size: to-rem(36);
       @function em($one, $two: 36) {
         @return prc($one, $two, 1) + 0em;
       }
@@ -116,5 +131,8 @@
   &__tab-btn {
   }
   &__tabs {
+   @include small-tablet {
+      display: none;
+   }
   }
 }

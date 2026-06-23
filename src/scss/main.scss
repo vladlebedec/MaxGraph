@@ -27,8 +27,13 @@ body {
   font-family: Google Sans;
   background: rgba(14, 18, 22, 1);
 }
-
+.main {
+   overflow: hidden;
+}
 .gradient {
+   @include small-tablet {
+      display: none;
+   }
   /* Ellipse 10013 */
 
   position: absolute;

@@ -1,9 +1,17 @@
 .loanreq {
   padding: em(60) 0;
+    @include small-tablet {
+   padding: to-rem(40) 0;
+  }
   &__hero-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: em(16);
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
   &__tabs {
     display: inline-flex;
@@ -14,6 +22,13 @@
     border-radius: em(999);
     padding: em(4);
     min-width: em(564);
+
+    @include small-tablet {
+      min-width: 0;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   &__tab-btn {
@@ -75,10 +90,12 @@
   }
   &__body {
     box-sizing: border-box;
-    padding: em(40);
   }
   &__grid-text {
     flex: 1 1 auto;
+    margin-bottom: em(32);
+    @include small-tablet {
+    }
   }
   &__grid-sidebar {
     p {
@@ -108,6 +125,9 @@
     flex-direction: column;
 
     gap: em(4);
+    @include small-tablet {
+      padding: to-rem(24) to-rem(16);
+    }
     button {
       display: flex;
       flex-direction: row;
@@ -129,20 +149,31 @@
       line-height: em(20);
 
       color: #ffffff;
+
+      @include mobile {
+        max-width: none;
+      }
     }
   }
   &__hero {
+   @include small-tablet {
+      display: flex;
+      flex-direction: column;gap: to-rem(32);
+   }
     h2 {
-      margin-bottom: em(20);
-      font-weight: 600;
-      font-size: em(36);
-      @function em($one, $two: 36) {
-        @return prc($one, $two, 1) + 0em;
-      }
+       font-weight: 600;
+       font-size: em(36);
+       @function em($one, $two: 36) {
+          @return prc($one, $two, 1) + 0em;
+         }
+         margin-bottom: em(20);
       line-height: em(40);
       letter-spacing: -0.01em;
 
       color: #ffffff;
+      @include small-tablet {
+         margin-bottom: to-rem(24);
+      }
     }
   }
   &__panel-item {
@@ -154,11 +185,24 @@
     gap: em(32);
     background: rgba(30, 37, 44, 1);
     border-radius: em(12);
+
+    @include tablet {
+      flex-direction: column;
+      gap: 0;
+    }
+
     img {
       max-height: em(420);
 
       background: #3b4650;
       border-radius: em(12);
+      object-fit: cover;
+      @include tablet {
+        max-height: none;
+        max-width: 100%;
+        height: auto;
+        height: to-rem(264);
+      }
     }
   }
 }
