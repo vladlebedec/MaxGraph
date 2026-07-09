@@ -128,3 +128,30 @@ new Swiper(".swiper-articles", {
     },
   },
 });
+
+let servicesSwiper = null;
+
+function initServicesSlider() {
+  const isMobile = window.innerWidth <= 992;
+
+  // Если мобилка И слайдер еще не создан
+  if (isMobile && !servicesSwiper) {
+    servicesSwiper = new Swiper(".services-section__grid", {
+      slidesPerView:
+        "auto" /* Карточки займут столько места, сколько указано в их CSS (например, 240px) */,
+      spaceBetween: 15 /* Отступ между слайдами на мобилке */,
+      centeredSlides: false /* Слайды прижаты к левому краю */,
+      grabCursor: true /* Курсор-ручка при наведении */,
+    });
+  }
+  // Если десктоп И слайдер сейчас запущен — уничтожаем его
+  else if (!isMobile && servicesSwiper) {
+    // Передаем (true, true), чтобы Swiper удалил все свои инлайн-стили и служебные классы
+    servicesSwiper.destroy(true, true);
+    servicesSwiper = null;
+  }
+}
+
+// Запускаем при загрузке страницы и при каждом изменении размера экрана
+window.addEventListener("DOMContentLoaded", initServicesSlider);
+window.addEventListener("resize", initServicesSlider);

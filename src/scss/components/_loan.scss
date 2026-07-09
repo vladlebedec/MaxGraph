@@ -27,6 +27,9 @@
     @include mobile {
       grid-template-columns: 1fr;
     }
+    @include small-tablet {
+      display: none;
+    }
   }
   &__item {
     position: relative;
@@ -71,5 +74,100 @@
       z-index: 3;
       position: relative;
     }
+  }
+}
+.services-section__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.services-section__grid {
+  width: 100%;
+  max-width: to-rem(1124);
+  margin: 0 auto;
+}
+
+.services-section__grid:not(.swiper-initialized) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: em(16);
+}
+
+.services-section__grid:not(.swiper-initialized) .services-section__wrapper {
+  display: contents;
+}
+
+/* ==========================================
+   БЛОК: service-card (Карточка)
+   ========================================== */
+.service-card {
+  position: relative;
+  box-sizing: border-box;
+  width: to-rem(266);
+  min-height: to-rem(365);
+  border: 1px solid #3b4650;
+  border-radius: to-rem(12);
+  padding: to-rem(20);
+  overflow: hidden;
+  isolation: isolate;
+
+  /* Градиентная тень поверх картинки */
+  .service-card__shadow {
+    position: absolute;
+    width: 100%;
+    height: em(198);
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      #0a1725 23.9%,
+      rgba(10, 23, 37, 0) 60.78%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Текст заголовка */
+  .service-card__title {
+    margin: 0;
+    width: 100%;
+    font-family: "Google Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+  }
+}
+@media (max-width: 992px) {
+  .services-section__grid.swiper {
+    display: block;
+    overflow: hidden;
+  }
+
+  .services-section__wrapper.swiper-wrapper {
+    display: flex;
+  }
+
+  .service-card.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 266px;
+    flex-shrink: 0;
+  }
+  img {
+    position: absolute;
+    width: calc(100% + em(12));
+    height: calc(100% + em(12));
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
   }
 }
