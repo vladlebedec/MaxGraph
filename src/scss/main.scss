@@ -26,14 +26,25 @@ body {
   margin: 0;
   font-family: Google Sans;
   background: rgba(14, 18, 22, 1);
+
+    &:has(.mobile-menu.menu--active) {
+    .header__down-button_chat {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
 }
+
 .main {
   overflow: hidden;
 }
+
 .gradient {
   @include small-tablet {
     display: none;
   }
+
   /* Ellipse 10013 */
 
   position: absolute;
@@ -41,11 +52,9 @@ body {
   height: em(185);
   top: em(400);
 
-  background: linear-gradient(
-    273.47deg,
+  background: linear-gradient(273.47deg,
     #ce6f64 7.01%,
     #000000 41.73%,
-    #264783 76.17%
-  );
+    #264783 76.17%);
   filter: blur(em(100));
 }
