@@ -1,8 +1,16 @@
 .footer {
   padding-top: em(56);
   padding-bottom: em(60);
-        @include small-tablet {
-   padding: to-rem(24) 0;
+
+  background-image: radial-gradient(
+    circle at 64% 12%,
+    rgba(0, 150, 255, 0.25) 0%,
+    rgba(0, 100, 200, 0.05) 15%,
+    transparent 80%
+  );
+
+  @include small-tablet {
+    padding: to-rem(24) 0;
   }
   &__body {
   }
@@ -94,25 +102,11 @@
   border-radius: em(12);
   position: relative;
   overflow: hidden;
+  z-index: 1;
   @include small-tablet-min {
     min-width: em(364);
   }
-  &:before {
-    content: "";
-    position: absolute;
-    font-size: em(800);
-    @function em($one, $two: 800) {
-      @return prc($one, $two, 1) + 0em;
-    }
-    filter: blur(em(50));
-    width: 1em;
-    height: 1em;
-    top: em(-300);
-    left: em(-350);
 
-    background: radial-gradient(rgba(#83c9fe, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
-    z-index: -1;
-  }
   &__top {
     display: flex;
     flex-direction: column;
@@ -316,8 +310,8 @@
   gap: em(24);
   padding-top: em(64);
   @include small-tablet {
-   font-size: 0.8rem;
-   padding-top: em(24);
+    font-size: 0.8rem;
+    padding-top: em(24);
   }
   ul {
     padding-left: 1em;

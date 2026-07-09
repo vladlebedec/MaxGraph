@@ -3,6 +3,13 @@ const calc = () => {
   const success = document.querySelector(".calc__success");
   if (!form) return;
 
+  const phoneInput = form.querySelector('input[type="tel"]');
+  if (phoneInput) {
+    import("inputmask").then(({default: Inputmask}) => {
+      new Inputmask("(+7)|(8) (999) 999-99-99", {placeholder: "0"}).mask(phoneInput);
+    });
+  }
+
   const el = (sel) => form.querySelector(`[data-calc="${sel}"]`);
 
   const amountEl = el("amount");
@@ -16,12 +23,13 @@ const calc = () => {
   const state = {
     amount: 50000,
     term: 3,
-    minAmount: 10000,
+    minAmount: 50000,
     maxAmount: 5000000,
     stepAmount: 10000,
     minTerm: 1,
     maxTerm: 60,
     stepTerm: 1,
+    rate: 0.015,
   };
 
   function formatAmount(n) {
@@ -44,7 +52,11 @@ const calc = () => {
   function updateUI() {
     amountEl.textContent = formatAmount(state.amount);
     termEl.textContent = state.term + " " + pluralMonths(state.term);
-    paymentEl.textContent = formatPayment(state.amount / state.term);
+
+    const r = state.rate;
+    const n = state.term;
+    const monthly = state.amount * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+    paymentEl.textContent = formatPayment(monthly);
   }
 
   minusAmount.addEventListener("click", () => {

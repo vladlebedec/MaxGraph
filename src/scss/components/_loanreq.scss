@@ -1,7 +1,7 @@
 .loanreq {
   padding: em(60) 0;
-    @include small-tablet {
-   padding: to-rem(40) 0;
+  @include small-tablet {
+    padding: to-rem(40) 0;
   }
   &__hero-header {
     display: flex;
@@ -22,6 +22,7 @@
     border-radius: em(999);
     padding: em(4);
     min-width: em(564);
+    margin-bottom: to-rem(48);
 
     @include small-tablet {
       min-width: 0;
@@ -29,6 +30,9 @@
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
     }
+  }
+  &__tabs::-webkit-scrollbar {
+    display: none;
   }
 
   &__tab-btn {
@@ -156,23 +160,24 @@
     }
   }
   &__hero {
-   @include small-tablet {
+    @include small-tablet {
       display: flex;
-      flex-direction: column;gap: to-rem(32);
-   }
+      flex-direction: column;
+      gap: to-rem(32);
+    }
     h2 {
-       font-weight: 600;
-       font-size: em(36);
-       @function em($one, $two: 36) {
-          @return prc($one, $two, 1) + 0em;
-         }
-         margin-bottom: em(20);
+      font-weight: 600;
+      font-size: to-rem(36);
+      @function em($one, $two: 36) {
+        @return prc($one, $two, 1) + 0em;
+      }
+      margin-bottom: em(20);
       line-height: em(40);
       letter-spacing: -0.01em;
 
       color: #ffffff;
       @include small-tablet {
-         margin-bottom: to-rem(24);
+        margin-bottom: to-rem(24);
       }
     }
   }

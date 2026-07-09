@@ -1,7 +1,7 @@
 .howtoget {
   padding: em(96) 0;
-    @include small-tablet {
-   padding: to-rem(40) 0;
+  @include small-tablet {
+    padding: to-rem(40) 0;
   }
   background: #1e252c;
   border-radius: em(24);
@@ -13,11 +13,16 @@
 
     button {
       padding: em(20) em(32);
-      max-width: em(266);
+      width: to-rem(266);
+      height: to-rem(60);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: #005fa8;
       border-radius: em(999);
       font-weight: 500;
       font-size: em(18);
+
       @function em($one, $two: 18) {
         @return prc($one, $two, 1) + 0em;
       }

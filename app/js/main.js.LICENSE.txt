@@ -1,0 +1,20 @@
+/*!
+ * dist/inputmask
+ * https://github.com/RobinHerbots/Inputmask
+ * Copyright (c) 2010 - 2024 Robin Herbots
+ * Licensed under the MIT license
+ * Version: 5.0.9
+ */
+
+/*!
+ * jQuery JavaScript Library v4.0.0
+ * https://jquery.com/
+ *
+ * Copyright OpenJS Foundation and other contributors
+ * Released under the MIT license
+ * https://jquery.com/license/
+ *
+ * Date: 2026-01-18T00:20Z
+ */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */

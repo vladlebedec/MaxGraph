@@ -28,12 +28,12 @@ body {
   background: rgba(14, 18, 22, 1);
 }
 .main {
-   overflow: hidden;
+  overflow: hidden;
 }
 .gradient {
-   @include small-tablet {
-      display: none;
-   }
+  @include small-tablet {
+    display: none;
+  }
   /* Ellipse 10013 */
 
   position: absolute;

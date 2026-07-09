@@ -1,8 +1,9 @@
 .map {
-  padding-top: em(60);
-  padding-bottom: em(120);
-      @include small-tablet {
-   padding: to-rem(40) 0;
+  padding-top: to-rem(60);
+  padding-bottom: to-rem(60);
+
+  @include small-tablet {
+    padding: to-rem(40) 0;
   }
   &__body {
   }
@@ -109,7 +110,7 @@
     flex-direction: column;
     gap: em(8);
     @include small-tablet {
-    font-size: 0.8rem;
+      font-size: 0.8rem;
     }
   }
   &__link {
@@ -172,6 +173,8 @@
   }
   &__canvas {
     width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
     max-width: em(564);
     aspect-ratio: 1/0.67;
     filter: invert(0.92) hue-rotate(180deg);

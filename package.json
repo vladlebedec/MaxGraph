@@ -55,12 +55,14 @@
       "webpack-stream": "^7.0.0"
    },
    "dependencies": {
+      "@fancyapps/fancybox": "^3.5.7",
       "@popperjs/core": "^2.11.2",
       "aos": "^2.3.4",
       "graph-modal": "^1.0.4",
       "graph-tabs": "^1.0.0",
       "gulp-version-number": "^0.2.4",
       "inputmask": "^5.0.7",
+      "jquery": "^4.0.0",
       "just-validate": "^3.3.3",
       "merge2": "^1.4.1",
       "rellax": "^1.12.1",

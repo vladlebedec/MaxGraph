@@ -1,7 +1,7 @@
 .advantages {
   padding: em(60) 0;
   @include small-tablet {
-   padding: to-rem(40) 0;
+    padding: to-rem(40) 0;
   }
   &__body {
   }
@@ -21,7 +21,7 @@
     }
   }
   &__grid-item {
-   font-size: 1rem;
+    font-size: 1rem;
     max-width: em(365);
     min-height: em(160);
     display: flex;
@@ -46,15 +46,15 @@
   &__grid-item_last {
     grid-row: span 2;
     @include small-tablet {
-   grid-row: span 1;
-   grid-column: span 2;
-   order: 10;
-}
+      grid-row: span 1;
+      grid-column: span 2;
+      order: 10;
+    }
   }
 
   &__hero {
     h2 {
-      margin-bottom: em(20);
+      margin-bottom: to-rem(48);
       font-weight: 600;
       font-size: to-rem(36);
       @function em($one, $two: 36) {

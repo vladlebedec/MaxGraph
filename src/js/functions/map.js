@@ -21,7 +21,8 @@ function initMap() {
     zoom: 9,
     controls: ["zoomControl"],
   });
-
+  map.copyrights.events.once("add", () => map.copyrights.removeAll());
+  map.controls.each((control) => map.controls.remove(control));
   map.behaviors.disable("scrollZoom");
 
   const pinIcon = {
