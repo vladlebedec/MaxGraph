@@ -1,5 +1,4 @@
 import JustValidate from 'just-validate';
-import Inputmask from "inputmask";
 
 export const validateForms = (selector, rules, afterSend) => {
    const form = document?.querySelector(selector);
@@ -16,16 +15,13 @@ export const validateForms = (selector, rules, afterSend) => {
    }
 
    if (telSelector) {
-      const inputMask = new Inputmask('(+7)|(8) (999) 999-99-99', {"placeholder": "0"});
-      inputMask.mask(telSelector);
-
       for (let item of rules) {
          if (item.tel) {
             item.rules.push({
                rule: 'function',
                validator: function () {
-                  const phone = telSelector.inputmask.unmaskedvalue();
-                  return phone.length === 10;
+                  const raw = telSelector.inputmask?.unmaskedvalue?.() ?? telSelector.value.replace(/\D/g, '');
+                  return raw.length >= 9;
                },
                errorMessage: item.telError
             });

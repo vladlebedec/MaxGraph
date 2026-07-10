@@ -161,7 +161,8 @@
     width: 266px;
     flex-shrink: 0;
   }
-  img {
+
+  .service-card.swiper-slide img {
     position: absolute;
     width: calc(100% + em(12));
     height: calc(100% + em(12));

@@ -3,13 +3,6 @@ const calc = () => {
   const success = document.querySelector(".calc__success");
   if (!form) return;
 
-  const phoneInput = form.querySelector('input[type="tel"]');
-  if (phoneInput) {
-    import("inputmask").then(({default: Inputmask}) => {
-      new Inputmask("(+7)|(8) (999) 999-99-99", {placeholder: "0"}).mask(phoneInput);
-    });
-  }
-
   const el = (sel) => form.querySelector(`[data-calc="${sel}"]`);
 
   const amountEl = el("amount");

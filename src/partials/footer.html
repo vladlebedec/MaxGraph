@@ -20,13 +20,10 @@
                 <img loading="lazy" src="img/footer/star.svg" alt="" />
               </span>
             </span>
-            <span class="yandex-review__desc"
-              >Рейтинг организации в Яндекс</span
-            >
+            <span class="yandex-review__desc">Рейтинг организации в Яндекс</span>
           </a>
           <a href="#" class="footer-main__address">
-            <span>Офис в Москве (ЮВАО)</span
-            ><span>г. Москва, проспект Рязанский, д. 37, этаж 4, офис 14</span>
+            <span>Офис в Москве (ЮВАО)</span><span>г. Москва, проспект Рязанский, д. 37, этаж 4, офис 14</span>
           </a>
         </div>
         <div class="footer-main__logos">
@@ -53,14 +50,10 @@
       <div class="footer-main-box">
         <div class="footer-main-box__top">
           <div>
-            <a href="tel:88003512295" class="footer-main-box__big-link"
-              >8 (800) 351 22 95</a
-            >
+            <a href="tel:88003512295" class="footer-main-box__big-link">8 (800) 351 22 95</a>
             <p class="footer-main-box__gray-txt">Ежедневно с 09:00 до 21:00</p>
           </div>
-          <a href="mailto:info@mail.ru" class="footer-main-box__big-link"
-            >info@mail.ru</a
-          >
+          <a href="mailto:info@mail.ru" class="footer-main-box__big-link">info@mail.ru</a>
         </div>
 
         <div class="footer-main-box__buttons">
@@ -72,7 +65,7 @@
             <span>TG</span>
             <img loading="lazy" src="img/footer/tg.svg" alt="" />
           </a>
-          <a href="#" class="footer-main-box__button">
+          <a href="#" class="footer-main-box__button" data-modal-open="modal_callback">
             <span>Оставить заявку</span>
           </a>
         </div>
@@ -193,3 +186,110 @@
     </div>
   </div>
 </footer>
+
+<div class="modal modal_callback">
+  <button type="button" class="modal__close"></button>
+  <div class="modal__container">
+    <div class="modal-callback">
+      <h2 class="modal-callback__title">
+        Оставьте заявку
+      </h2>
+      <p class="modal-callback__desc">
+        Наш менеджер свяжется с вами в ближайшее время
+      </p>
+      <form class="modal-callback__form">
+        <div class="modal-callback__labels">
+          <label class="modal-callback__label">
+            <h4 class="modal-callback__label-title">Номер телефона <span>*</span></h4>
+            <input placeholder="+7" type="tel" class="modal-callback__input">
+          </label>
+          <label class="modal-callback__label">
+            <h4 class="modal-callback__label-title">Как к вам обращаться</h4>
+            <input type="text" placeholder="Иван Иванов" class="modal-callback__input">
+          </label>
+          <label class="modal-callback__label">
+            <h4 class="modal-callback__label-title">Ваш вопрос</h4>
+            <textarea placeholder="Сообщение" class="modal-callback__textarea"></textarea>
+          </label>
+        </div>
+        <button class="modal-callback__button">Оставить заявку</button>
+        <div class="modal-callback__agrees">
+          <label class="modal-callback__agree">
+            <input type="checkbox" class="modal-callback__agree-input">
+            <p class="modal-callback__agree-text">
+              Я даю согласие на обработку персональных данных. Подтверждаю ознакомление с пользовательским соглашением
+            </p>
+          </label>
+          <label class="modal-callback__agree">
+            <input type="checkbox" class="modal-callback__agree-input" checked>
+            <p class="modal-callback__agree-text">
+              Я согласен(на) на информирование о продуктах, сервисах, услугах и акциях и передачу соответствующих данных
+              лицам, указанным в перечне
+            </p>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal_callback">
+  <button type="button" class="modal__close"></button>
+  <div class="modal__container">
+    <div class="modal-callback">
+      <h2 class="modal-callback__title">
+        Задайте ваш вопрос
+      </h2>
+      <p class="modal-callback__desc">
+        Наш менеджер свяжется с вами в ближайшее время
+      </p>
+      <form class="modal-callback__form">
+        <div class="modal-callback__labels">
+          <label class="modal-callback__label">
+            <h4 class="modal-callback__label-title">Номер телефона <span>*</span></h4>
+            <input placeholder="+7" type="tel" class="modal-callback__input">
+          </label>
+          <label class="modal-callback__label">
+            <h4 class="modal-callback__label-title">Как к вам обращаться</h4>
+            <input type="text" placeholder="Иван Иванов" class="modal-callback__input">
+          </label>
+          <label class="modal-callback__label">
+            <h4 class="modal-callback__label-title">Ваш вопрос</h4>
+            <textarea placeholder="Сообщение" class="modal-callback__textarea"></textarea>
+          </label>
+        </div>
+        <button class="modal-callback__button">Оставить заявку</button>
+        <div class="modal-callback__agrees">
+          <label class="modal-callback__agree">
+            <input type="checkbox" class="modal-callback__agree-input">
+            <p class="modal-callback__agree-text">
+              Я даю согласие на обработку персональных данных. Подтверждаю ознакомление с пользовательским соглашением
+            </p>
+          </label>
+          <label class="modal-callback__agree">
+            <input type="checkbox" class="modal-callback__agree-input" checked>
+            <p class="modal-callback__agree-text">
+              Я согласен(на) на информирование о продуктах, сервисах, услугах и акциях и передачу соответствующих данных
+              лицам, указанным в перечне
+            </p>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal_thanks active">
+  <button type="button" class="modal__close"></button>
+  <div class="modal__container">
+    <div class="modal-thanks">
+      <img loading="lazy" src="./img/thanks-icon.webp" alt="" class="modal-thanks__icon">
+      <h4 class="modal-thanks__title">Спасибо! Данные успешно отправлены</h4>
+      <p class="modal-thanks__desc">Наш менеджер свяжется с вами в ближайшее время</p>
+      <a href="#" class="modal-thanks__link">
+        <span>Вернуться</span>
+        <img src="./img/arrow-right.svg" alt="">
+      </a>
+    </div>
+  </div>
+</div>
