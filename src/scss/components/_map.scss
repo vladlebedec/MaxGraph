@@ -52,8 +52,15 @@
     max-width: em(278);
     width: 100%;
     min-height: em(46);
-    background: #e6f4ff;
+    background: #1e252c;
     border-radius: em(999);
+    color: #6e7c89;
+    transition: background 0.3s, color 0.3s;
+
+    &.active {
+      background: #e6f4ff;
+      color: #0e1216;
+    }
   }
 }
 .map-box {

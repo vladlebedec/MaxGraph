@@ -60,3 +60,31 @@ function initMap() {
 }
 
 loadYmaps(initMap);
+
+// map tabs
+const mapTabs = () => {
+  const section = document.querySelector('.map');
+  if (!section) return;
+
+  const buttons = section.querySelectorAll('[data-map-tab]');
+  const contents = section.querySelectorAll('[data-map-content]');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const tab = btn.dataset.mapTab;
+
+      buttons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      contents.forEach((el) => {
+        el.style.display = el.dataset.mapContent === tab ? '' : 'none';
+      });
+    });
+  });
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', mapTabs);
+} else {
+  mapTabs();
+}

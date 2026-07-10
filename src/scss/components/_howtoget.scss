@@ -1,10 +1,50 @@
 .howtoget {
   padding: em(96) 0;
+
   @include small-tablet {
     padding: to-rem(40) 0;
   }
+
   background: #1e252c;
   border-radius: em(24);
+
+  &__container {}
+
+  &__numbers {
+    display: none;
+     width: fit-content;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+      margin-right: 12px;
+    }
+  }
+
+  &__numbers-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+
+    img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      height: 38.5px;
+      width: 2px;
+      background: #6E7C89;
+    }
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
@@ -24,13 +64,25 @@
       font-size: em(18);
 
       @function em($one, $two: 18) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(20);
 
       color: #ffffff;
+
+      @include mobile {
+        grid-column: span 10;
+        width: 100%;
+      }
+    }
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(10, auto);
     }
   }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -43,23 +95,33 @@
 
     @include mobile {
       grid-template-columns: 1fr;
+      grid-column: span 9;
     }
   }
+
   &__hero {
     align-self: flex-start;
     font-weight: 600;
     font-size: to-rem(36);
+
     @function em($one, $two: 36) {
-      @return prc($one, $two, 1) + 0em;
+      @return prc($one, $two, 1)+0em;
     }
+
     line-height: em(40);
     letter-spacing: -0.01em;
     color: #ffffff;
     margin-bottom: em(48);
+
     @include small-tablet {
       margin-bottom: to-rem(24);
     }
+
+    @include mobile {
+      grid-column: span 10;
+    }
   }
+
   &__item {
     max-width: em(365);
     position: relative;
@@ -73,9 +135,18 @@
 
     @include mobile {
       max-width: none;
+      min-height: 93px;
+      border-radius: 16px;
+      aspect-ratio: auto;
+      padding: 16px 16px 20px 16px;
+      background: #3B4650;
+
+      &>img {
+        display: none;
+      }
     }
 
-    & > img {
+    &>img {
       width: 100%;
       border-radius: em(12);
       position: absolute;
@@ -84,37 +155,50 @@
       left: 0;
     }
   }
+
   &__item-text {
     display: flex;
     flex-direction: column;
     gap: em(8);
+
     h3 {
       font-weight: 600;
       font-size: em(20);
+
       @function em($one, $two: 20) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(28);
 
       color: #ffffff;
     }
+
     p {
       font-size: em(14);
+
       @function em($one, $two: 14) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(20);
       color: #ffffff;
     }
   }
+
   &__item-body {
     display: flex;
     position: relative;
     z-index: 2;
   }
+
   &__item-icon {
     flex: 0 0 em(48);
     width: em(48);
     height: em(48);
+
+    @include mobile {
+      display: none;
+    }
   }
 }
