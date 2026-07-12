@@ -70,6 +70,8 @@
     min-height: em(60);
     background: #005fa8;
     border-radius: em(999);
+    position: relative;
+    z-index: 10;
 
     @include mobile {
       min-width: 0;
