@@ -29,7 +29,7 @@ body {
   font-family: Google Sans;
   background: rgba(14, 18, 22, 1);
 
-    &:has(.mobile-menu.menu--active) {
+  &:has(.mobile-menu.menu--active) {
     .header__down-button_chat {
       opacity: 0;
       visibility: hidden;
@@ -40,6 +40,14 @@ body {
 
 .main {
   overflow: hidden;
+
+  &_main {
+    margin-bottom: -220px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .gradient {

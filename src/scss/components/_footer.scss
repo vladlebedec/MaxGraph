@@ -1,9 +1,24 @@
 .footer {
   padding-top: em(56);
   padding-bottom: em(60);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 
   @include small-tablet {
     padding: to-rem(24) 0;
+  }
+
+  &_main {
+    padding-top: 250px;
+
+    @include tablet {
+      padding-top: em(56);
+    }
+
+    @include small-tablet {
+      padding: to-rem(24) 0;
+    }
   }
 
   &__body {}
@@ -132,7 +147,8 @@
   background: #0e1216;
   border-radius: em(12);
   position: relative;
-  overflow: hidden;
+
+  &::after {}
 
   @include small-tablet-min {
     min-width: em(364);
@@ -159,6 +175,10 @@
 
     background: radial-gradient(rgba(#83c9fe, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
     z-index: -1;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__top {
