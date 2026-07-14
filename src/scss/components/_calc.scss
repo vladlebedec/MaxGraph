@@ -45,7 +45,10 @@
     border-radius: em(16);
 
     @include mobile {
-      padding: em(24);
+      padding: 0 em(24);
+      border: none;
+      border-radius: 0;
+    
     }
   }
 
@@ -164,6 +167,10 @@
       letter-spacing: -0.01em;
 
       color: #ffffff;
+
+      @include mobile {
+        margin-bottom: em(24);
+      }
     }
   }
   &__item {
@@ -258,6 +265,10 @@
 
       background: #1e252c;
       border-radius: em(999);
+    }
+
+    @include mobile {
+      font-size: 28px;
     }
   }
 }

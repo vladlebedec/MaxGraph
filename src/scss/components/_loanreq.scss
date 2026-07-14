@@ -1,5 +1,6 @@
 .loanreq {
   padding: em(60) 0;
+  overflow: hidden;
   @include small-tablet {
     padding: to-rem(40) 0;
   }
@@ -29,6 +30,7 @@
       width: 100%;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      margin-bottom: 0;
     }
   }
   &__tabs::-webkit-scrollbar {
@@ -163,7 +165,7 @@
     @include small-tablet {
       display: flex;
       flex-direction: column;
-      gap: to-rem(32);
+      gap: 32px;
     }
     h2 {
       font-weight: 600;

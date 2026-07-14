@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 new Swiper(".swiper-hero", {
-  loop: false,
+  loop: true,
   pagination: {
     el: ".swiper-pagination",
   },
@@ -33,15 +33,18 @@ new Swiper(".swiper-client", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.25,
       slidesPerGroup: 1,
+      spaceBetween: 16
     },
     480: {
       slidesPerView: 2,
       slidesPerGroup: 2,
+      paceBetween: 16
     },
     768: {
       slidesPerView: 3,
+      spaceBetween: 32,
     },
     1024: {
       slidesPerView: 4,
@@ -59,8 +62,9 @@ new Swiper(".swiper-reviews", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.25,
       slidesPerGroup: 1,
+      spaceBetween: 16
     },
     480: {
       slidesPerView: 2,
@@ -69,6 +73,7 @@ new Swiper(".swiper-reviews", {
     768: {
       slidesPerView: 3,
       slidesPerGroup: 2,
+      spaceBetween: 32,
     },
     1024: {
       slidesPerView: 4,
