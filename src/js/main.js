@@ -4,12 +4,10 @@ import "./_functions";
 import "./_components";
 import Swiper from "swiper/bundle";
 import { _slide } from "./functions/slide";
-import Inputmask from "inputmask";
+import { initPhoneMask } from "./functions/phone-mask";
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('input[type="tel"]').forEach((input) => {
-    Inputmask({ mask: "+7 (999) 999-99-99", placeholder: "_" }).mask(input);
-  });
+  initPhoneMask();
 });
 
 new Swiper(".swiper-hero", {

@@ -53,12 +53,66 @@
     width: em(48);
     height: em(48);
     font-size: 1rem;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(em(12));
-    border: em(1) solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 em(8) em(32) 0 rgba(0, 0, 0, 0.1);
+
+    // Glass effect: light angle −45°, intensity 80%, refraction 80, depth 25, dispersion 50
+    background:
+      // Prismatic dispersion layer (color fringe at edges)
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(200, 220, 255, 0.15) 50%,
+        rgba(255, 220, 200, 0.1) 70%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      // Main glass reflection – light from −45° at 80% intensity
+      linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.25) 25%,
+        rgba(255, 255, 255, 0.04) 50%,
+        rgba(255, 255, 255, 0.08) 75%,
+        rgba(255, 255, 255, 0.18) 100%
+      );
+
+    backdrop-filter: blur(em(20));
+    -webkit-backdrop-filter: blur(em(20));
+
+    border: em(1) solid rgba(255, 255, 255, 0.45);
+
+    // Multi-layer shadows – depth 25 + dispersion
+    box-shadow:
+      0 em(8) em(32) 0 rgba(0, 0, 0, 0.12),
+      0 em(2) em(8) 0 rgba(0, 0, 0, 0.08),
+      inset 0 em(1) em(2) 0 rgba(255, 255, 255, 0.35),
+      inset 0 em(-1) em(2) 0 rgba(0, 0, 0, 0.08);
+
     border-radius: em(999);
     transition: all 0.35s ease-in-out;
+
+    &:hover {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0) 30%,
+          rgba(200, 220, 255, 0.2) 50%,
+          rgba(255, 220, 200, 0.15) 70%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.9) 0%,
+          rgba(255, 255, 255, 0.35) 25%,
+          rgba(255, 255, 255, 0.06) 50%,
+          rgba(255, 255, 255, 0.12) 75%,
+          rgba(255, 255, 255, 0.25) 100%
+        );
+      border-color: rgba(255, 255, 255, 0.6);
+      box-shadow:
+        0 em(12) em(40) 0 rgba(0, 0, 0, 0.15),
+        0 em(4) em(12) 0 rgba(0, 0, 0, 0.1),
+        inset 0 em(1) em(2) 0 rgba(255, 255, 255, 0.5),
+        inset 0 em(-1) em(2) 0 rgba(0, 0, 0, 0.06);
+    }
   }
 
   &__close-btn {

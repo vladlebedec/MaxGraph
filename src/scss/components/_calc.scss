@@ -239,6 +239,16 @@
     color: #e6f4ff;
     width: 100%;
     height: to-rem(60);
+
+    &.is-error {
+      border-color: #E25252;
+    }
+
+    &:focus {
+      outline: none;
+      stroke: none;
+      border-color: #0183E0;
+    }
   }
   &__item-summary {
     margin-top: 18px;

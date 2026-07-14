@@ -1,3 +1,5 @@
+import { initPhoneMask } from './phone-mask';
+
 export const initModals = () => {
   const modals = document.querySelectorAll('.modal');
 
@@ -11,6 +13,7 @@ export const initModals = () => {
     if (modal) {
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
+      initPhoneMask(modal);
     }
   });
 
