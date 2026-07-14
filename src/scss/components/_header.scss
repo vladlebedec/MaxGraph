@@ -57,22 +57,18 @@
     // Glass effect: light angle −45°, intensity 80%, refraction 80, depth 25, dispersion 50
     background:
       // Prismatic dispersion layer (color fringe at edges)
-      linear-gradient(
-        135deg,
+      linear-gradient(135deg,
         rgba(255, 255, 255, 0) 30%,
         rgba(200, 220, 255, 0.15) 50%,
         rgba(255, 220, 200, 0.1) 70%,
-        rgba(255, 255, 255, 0) 100%
-      ),
+        rgba(255, 255, 255, 0) 100%),
       // Main glass reflection – light from −45° at 80% intensity
-      linear-gradient(
-        -45deg,
+      linear-gradient(-45deg,
         rgba(255, 255, 255, 0.8) 0%,
         rgba(255, 255, 255, 0.25) 25%,
         rgba(255, 255, 255, 0.04) 50%,
         rgba(255, 255, 255, 0.08) 75%,
-        rgba(255, 255, 255, 0.18) 100%
-      );
+        rgba(255, 255, 255, 0.18) 100%);
 
     backdrop-filter: blur(em(20));
     -webkit-backdrop-filter: blur(em(20));
@@ -91,21 +87,17 @@
 
     &:hover {
       background:
-        linear-gradient(
-          135deg,
+        linear-gradient(135deg,
           rgba(255, 255, 255, 0) 30%,
           rgba(200, 220, 255, 0.2) 50%,
           rgba(255, 220, 200, 0.15) 70%,
-          rgba(255, 255, 255, 0) 100%
-        ),
-        linear-gradient(
-          -45deg,
+          rgba(255, 255, 255, 0) 100%),
+        linear-gradient(-45deg,
           rgba(255, 255, 255, 0.9) 0%,
           rgba(255, 255, 255, 0.35) 25%,
           rgba(255, 255, 255, 0.06) 50%,
           rgba(255, 255, 255, 0.12) 75%,
-          rgba(255, 255, 255, 0.25) 100%
-        );
+          rgba(255, 255, 255, 0.25) 100%);
       border-color: rgba(255, 255, 255, 0.6);
       box-shadow:
         0 em(12) em(40) 0 rgba(0, 0, 0, 0.15),
@@ -143,7 +135,7 @@
     display: none;
   }
 
-  .burger--active ~ .header__close-btn {
+  .burger--active~.header__close-btn {
     display: flex;
   }
 
@@ -156,7 +148,7 @@
     font-size: to-rem(16);
 
     @function em($one, $two: 16) {
-      @return prc($one, $two, 1) + 0em;
+      @return prc($one, $two, 1)+0em;
     }
 
     line-height: em(22);
@@ -169,7 +161,7 @@
     align-items: center;
     gap: em(32);
 
-    @include small-tablet {
+    @include tablet {
       display: none;
     }
   }
@@ -263,7 +255,7 @@
     display: grid;
     grid-template-columns: 1fr em(266);
 
-    @include small-tablet {
+    @include tablet {
       grid-template-columns: 1fr;
       gap: em(32);
     }
@@ -271,24 +263,21 @@
     padding: em(41);
     transform: translateY(em(20));
     opacity: 0;
-    transition:
-      transform 0.35s ease 0.1s,
-      opacity 0.35s ease 0.1s;
+    transition: transform 0.35s ease 0.1s,
+    opacity 0.35s ease 0.1s;
 
     background: #0e1216;
 
     border: em(1) solid #3b4650;
     border-radius: em(16);
-    max-width: calc(
-      var(--container-width) + em(41 * 2) - (var(--container-offset) * 2)
-    );
+    max-width: calc(var(--container-width) + em(41 * 2) - (var(--container-offset) * 2));
     width: calc(100% - em(16));
     margin: em(8);
     margin-top: em(96);
     margin-left: auto;
     margin-right: auto;
 
-    @include small-tablet {
+    @include tablet {
       padding: to-rem(16);
       margin-left: 0;
       margin-right: 0;
@@ -297,8 +286,7 @@
   }
 
   &__item {
-    &_nav {
-    }
+    &_nav {}
   }
 
   &__close {
@@ -345,10 +333,15 @@
     border-radius: em(999);
     padding: em(4);
     margin-bottom: em(8);
-    max-width: calc(100vw - (var(--container-offset) * 2));
+    max-width: 100%;
     overflow-x: auto;
-    width: 100%;
+    width: fit-content;
+
+    @include tablet {
+      max-width: calc(100vw - (var(--container-offset) * 2));
+    }
   }
+
   &__tabs::-webkit-scrollbar {
     display: none;
   }
@@ -358,7 +351,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: em(8);
-    width: fit-content;
+    width: max-content;
   }
 
   &__tab-btn {
@@ -400,14 +393,14 @@
 
     &.is-active {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, auto);
 
       @include tablet {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, auto);
       }
 
       @include small-tablet {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 100%;
       }
 
       opacity: 1;
@@ -420,11 +413,11 @@
     flex-direction: column;
     gap: em(20);
 
-    & > p {
+    &>p {
       font-size: em(18);
 
       @function em($one, $two: 18) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
 
       line-height: em(26);
@@ -454,7 +447,7 @@
       font-size: em(16);
 
       @function em($one, $two: 16) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
 
       line-height: em(22);
@@ -469,7 +462,7 @@
   max-width: em(762);
   font-size: 1rem;
 
-  @include small-tablet {
+  @include tablet {
     flex-wrap: wrap;
   }
 
@@ -477,7 +470,7 @@
     font-size: em(18);
 
     @function em($one, $two: 18) {
-      @return prc($one, $two, 1) + 0em;
+      @return prc($one, $two, 1)+0em;
     }
 
     line-height: em(26);
@@ -503,7 +496,7 @@
     font-size: em(18);
 
     @function em($one, $two: 18) {
-      @return prc($one, $two, 1) + 0em;
+      @return prc($one, $two, 1)+0em;
     }
 
     line-height: em(26);
@@ -515,7 +508,7 @@
     font-size: em(12);
 
     @function em($one, $two: 12) {
-      @return prc($one, $two, 1) + 0em;
+      @return prc($one, $two, 1)+0em;
     }
 
     line-height: em(18);
@@ -528,7 +521,7 @@
   flex-direction: column;
   gap: em(49);
 
-  @include small-tablet {
+  @include tablet {
     order: -1;
     gap: to-rem(16);
   }
@@ -558,7 +551,7 @@
       font-size: to-rem(16);
 
       @function em($one, $two: 16) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
 
       line-height: em(22);
@@ -571,7 +564,7 @@
     display: grid;
     gap: em(32);
 
-    @include small-tablet {
+    @include tablet {
       gap: to-rem(16);
       grid-template-columns: repeat(2, 1fr);
     }
@@ -588,11 +581,9 @@
     &:nth-child(1) {
       background:
         linear-gradient(0deg, #02070d, #02070d),
-        linear-gradient(
-          180deg,
+        linear-gradient(180deg,
           rgba(2, 7, 13, 0.2) 4.75%,
-          rgba(2, 7, 13, 0) 23.5%
-        );
+          rgba(2, 7, 13, 0) 23.5%);
     }
 
     @include small-tablet {
@@ -622,7 +613,7 @@
       font-size: em(18);
 
       @function em($one, $two: 18) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
 
       line-height: em(26);
@@ -635,6 +626,5 @@
 }
 
 .mobile-menu {
-  &__item {
-  }
+  &__item {}
 }
