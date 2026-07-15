@@ -121,8 +121,9 @@ new Swiper(".swiper-articles", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.65,
       slidesPerGroup: 1,
+      spaceBetween: 16
     },
     480: {
       slidesPerView: 2,
