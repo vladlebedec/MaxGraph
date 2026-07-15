@@ -1,10 +1,12 @@
 .calc {
   padding-top: em(120);
   padding-bottom: em(60);
+
   @include small-tablet {
     padding-top: to-rem(80);
     padding-bottom: to-rem(40);
   }
+
   &__success {
     display: none;
     text-align: center;
@@ -17,9 +19,11 @@
     h3 {
       font-weight: 600;
       font-size: em(28);
+
       @function em($one, $two: 28) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(36);
       color: #e6f4ff;
       margin-bottom: em(12);
@@ -27,9 +31,11 @@
 
     p {
       font-size: em(16);
+
       @function em($one, $two: 16) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(24);
       color: #6e7c89;
     }
@@ -48,16 +54,18 @@
       padding: 0 em(24);
       border: none;
       border-radius: 0;
-    
+
     }
   }
 
   &__footer {
     p {
       font-size: to-rem(12);
+
       @function em($one, $two: 12) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(18);
       leading-trim: both;
       text-edge: cap;
@@ -71,11 +79,13 @@
       gap: em(12);
     }
   }
+
   &__footer-item {
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: em(12);
+
     input[type="checkbox" i] {
       appearance: none;
       box-sizing: border-box;
@@ -86,6 +96,7 @@
       border-radius: em(8);
       cursor: pointer;
     }
+
     input:checked {
       background-color: #0171c7;
       background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.28846 8.775L13.7635 0.3C13.9635 0.1 14.1968 0 14.4635 0C14.7301 0 14.9635 0.1 15.1635 0.3C15.3635 0.5 15.4635 0.737667 15.4635 1.013C15.4635 1.28833 15.3635 1.52567 15.1635 1.725L5.98846 10.925C5.78846 11.125 5.55513 11.225 5.28846 11.225C5.02179 11.225 4.78846 11.125 4.58846 10.925L0.288462 6.625C0.0884617 6.425 -0.00753846 6.18767 0.000461538 5.913C0.00846154 5.63833 0.112795 5.40067 0.313461 5.2C0.514128 4.99933 0.751795 4.89933 1.02646 4.9C1.30113 4.90067 1.53846 5.00067 1.73846 5.2L5.28846 8.775Z' fill='white'/%3E%3C/svg%3E");
@@ -96,6 +107,7 @@
       border-color: #0171c7;
     }
   }
+
   &__grid-item {
     max-width: em(365);
 
@@ -103,18 +115,22 @@
       max-width: none;
     }
 
-    & > p {
+    &>p {
       font-size: to-rem(14);
+
       @function em($one, $two: 14) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(20);
       color: #6e7c89;
       margin-bottom: em(8);
     }
+
     &:has(> button) {
       align-self: end;
     }
+
     button {
       display: flex;
       flex-direction: row;
@@ -131,13 +147,21 @@
       font-weight: 500;
 
       @function em($one, $two: 18) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(20);
 
       color: #ffffff;
     }
+
+    &:has(input.is-error) {
+      .calc__item-error {
+        display: block;
+      }
+    }
   }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -155,14 +179,17 @@
       margin-bottom: em(32);
     }
   }
+
   &__hero {
     h2 {
       margin-bottom: em(20);
       font-weight: 600;
       font-size: to-rem(36);
+
       @function em($one, $two: 36) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(40);
       letter-spacing: -0.01em;
 
@@ -173,6 +200,7 @@
       }
     }
   }
+
   &__item {
     /* Input Container */
 
@@ -190,12 +218,15 @@
     border-radius: em(999);
     height: to-rem(60);
     max-width: em(365);
+
     p {
       font-weight: 600;
       font-size: em(28);
+
       @function em($one, $two: 28) {
-        @return prc($one, $two, 1) + 0em;
+        @return prc($one, $two, 1)+0em;
       }
+
       line-height: em(32);
 
       text-align: right;
@@ -203,6 +234,7 @@
 
       color: #e6f4ff;
     }
+
     button {
       padding: em(4);
       width: to-rem(44);
@@ -210,21 +242,26 @@
       background: #3b4650;
       backdrop-filter: blur(em(1.6));
       border-radius: em(999);
+
       img {
         opacity: 50%;
       }
     }
+
     button:active {
       background: #0171c7;
       backdrop-filter: blur(em(1.6));
+
       img {
         opacity: 1;
       }
     }
   }
+
   input {
     font-size: 1rem;
   }
+
   &__item-input {
     box-sizing: border-box;
 
@@ -250,6 +287,14 @@
       border-color: #0183E0;
     }
   }
+
+  &__item-error {
+    color: #E25252;
+    font-size: em(14);
+    margin-top: 8px;
+    display: none;
+  }
+
   &__item-summary {
     margin-top: 18px;
     display: flex;
@@ -259,9 +304,11 @@
 
     font-weight: 600;
     font-size: to-rem(36);
+
     @function em($one, $two: 36) {
-      @return prc($one, $two, 1) + 0em;
+      @return prc($one, $two, 1)+0em;
     }
+
     line-height: em(40);
 
     text-align: right;
